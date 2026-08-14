@@ -37,6 +37,14 @@ deployment → Source: GitHub Actions**.
 Da qui in avanti ogni `git push` ripubblica il sito da solo, in un paio di
 minuti. Lo stato si vede nella scheda **Actions**.
 
+### Se il push dà errore 403
+
+In questo repository git prende le credenziali da `gh`, non dal portachiavi di
+macOS: le due si davano fastidio a vicenda. Se un giorno il push venisse
+rifiutato, quasi sempre è il token di `gh` scaduto o cambiato, e si risolve con
+`gh auth login` (scegliendo *Login with a web browser*) senza toccare il
+repository.
+
 ---
 
 ## Lavorare al sito
@@ -198,20 +206,16 @@ Sono gestiti da [Giscus](https://giscus.app), che si appoggia alle
 **Discussions** del repository: gratis, senza server, senza pubblicità. Chi
 commenta deve avere un account GitHub.
 
-Vanno accesi una volta sola, dopo aver creato il repository:
+Sono già configurati e attivi: le discussioni finiscono nella categoria
+**Announcements** del repository, una per post, e chi commenta deve avere un
+account GitHub.
 
-1. nel repository: **Settings → General → Features → Discussions**, spunta;
-2. installa <https://github.com/apps/giscus> sul repository
-   dell'organizzazione;
-3. vai su <https://giscus.app>, inserisci
-   `unacosabelladiieri/unacosabelladiieri.github.io` e scorri fino allo
-   snippet in fondo alla pagina;
-4. copia `data-repo-id` e `data-category-id` dentro `comments` in
-   [`src/site.config.ts`](src/site.config.ts);
-5. `git push`, e i commenti sono online.
+Per togliere i commenti da un singolo post basta `comments: false` nel suo
+frontmatter; per spegnerli ovunque, `enabled: false` in `comments` dentro
+[`src/site.config.ts`](src/site.config.ts).
 
-Finché quei due valori sono vuoti i commenti non compaiono, ma il resto del
-sito funziona normalmente.
+Se un giorno cambiassi repository, i due identificativi vanno rifatti: giscus è
+legato al repository, non al sito.
 
 ---
 
