@@ -42,15 +42,11 @@ export const site = {
 export const comments = {
   enabled: true,
   repo: 'unacosabelladiieri/unacosabelladiieri.github.io',
-  // ⚠️ Da riempire una volta creato il repository nell'organizzazione:
-  // giscus è legato al repository, quindi i valori del vecchio non valgono più.
-  // Su https://giscus.app inserisci
-  // `unacosabelladiieri/unacosabelladiieri.github.io` e copia qui i due
-  // valori dallo snippet in fondo alla pagina.
-  // Finché sono vuoti i commenti non compaiono (il resto del sito funziona).
-  repoId: '',
+  repoId: 'R_kgDOT4mx9A',
+  // In "Announcements" solo tu puoi aprire discussioni: le apre giscus a nome
+  // del sito, una per post, e i lettori rispondono lì sotto.
   category: 'Announcements',
-  categoryId: '',
+  categoryId: 'DIC_kwDOT4mx9M4DDYjl',
   // 'pathname' associa la discussione all'URL del post
   mapping: 'pathname',
   lang: 'it',
