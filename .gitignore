@@ -4,7 +4,7 @@ dist/
 .astro/
 
 # personale
-.README_personal
+README_personal.md
 
 # dependencies
 node_modules/
