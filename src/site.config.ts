@@ -45,7 +45,8 @@ export const site = {
  * script di terzi.
  */
 export const statistiche = {
-  codice: '',
+  // pannello: https://unacosabelladiieri.goatcounter.com
+  codice: 'unacosabelladiieri',
 } as const;
 
 /**
