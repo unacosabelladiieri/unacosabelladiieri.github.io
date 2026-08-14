@@ -7,7 +7,8 @@
 export const site = {
   title: 'Una cosa bella di ieri',
   // Sottotitolo mostrato in home e nei metadati
-  description: 'Appunti su una cosa bella al giorno: libri, musica, schermo, viaggi e tutto il resto.',
+  description:
+    "Appunti su cose belle, per dimenticarsele qui in attesa di altre. Tutto inizia da un'eclissi.",
   author: 'Vittorio',
   /** Come firmi il copyright in fondo alle pagine. */
   firma: 'v.',
