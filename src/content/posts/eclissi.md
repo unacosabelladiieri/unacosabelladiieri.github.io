@@ -5,7 +5,7 @@ description: Sull'eclissi di sole del 12 agosto 2026, vista e ignorata
 cover: ./eclissi.jpeg
 tags:
   - Mare
-  - Cosebelle
+  - Luoghi
 coverAlt: Eclissi di sole, 12 agosto 2026
 ---
 
