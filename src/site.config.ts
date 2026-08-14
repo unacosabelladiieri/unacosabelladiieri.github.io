@@ -15,11 +15,14 @@ export const site = {
    * Per un sito utente (repo "username.github.io") basta questo.
    * Per un repo di progetto va valorizzato anche `base` in astro.config.ts.
    */
-  url: 'https://vdeiuliis.github.io',
+  url: 'https://unacosabelladiieri.github.io',
   // Mostrati nel footer. Lascia stringa vuota per nascondere una voce.
   social: {
     email: '',
-    github: 'vdeiuliis',
+    // volutamente vuoto: il blog sta per conto suo, staccato dal profilo
+    // GitHub accademico. Metti 'unacosabelladiieri' per rimandare
+    // all'organizzazione, o il tuo nome utente se cambi idea.
+    github: '',
     instagram: '',
   },
 } as const;
@@ -38,13 +41,16 @@ export const site = {
  */
 export const comments = {
   enabled: true,
-  repo: 'vdeiuliis/vdeiuliis.github.io',
-  repoId: 'MDEwOlJlcG9zaXRvcnkzNDkxNjcxNDY=',
+  repo: 'unacosabelladiieri/unacosabelladiieri.github.io',
+  // ⚠️ Da riempire una volta creato il repository nell'organizzazione:
+  // giscus è legato al repository, quindi i valori del vecchio non valgono più.
+  // Su https://giscus.app inserisci
+  // `unacosabelladiieri/unacosabelladiieri.github.io` e copia qui i due
+  // valori dallo snippet in fondo alla pagina.
+  // Finché sono vuoti i commenti non compaiono (il resto del sito funziona).
+  repoId: '',
   category: 'Announcements',
-  // ⚠️ Ultimo pezzo mancante: copia `data-category-id` dallo snippet che
-  // giscus.app genera per il tuo repository e incollalo qui (inizia con DIC_).
-  // Finché è vuoto i commenti non compaiono.
-  categoryId: 'DIC_kwDOFM_eKs4DDXJo',
+  categoryId: '',
   // 'pathname' associa la discussione all'URL del post
   mapping: 'pathname',
   lang: 'it',

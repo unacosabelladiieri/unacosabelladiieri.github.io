@@ -2,24 +2,37 @@
 
 Blog personale di Vittorio, costruito con [Astro](https://astro.build) e
 pubblicato gratuitamente su GitHub Pages all'indirizzo
-<https://vdeiuliis.github.io>.
+<https://unacosabelladiieri.github.io>.
 
 I post sono file Markdown normali: si possono scrivere in Obsidian.
+
+Il sito vive in un'organizzazione GitHub dedicata, `unacosabelladiieri`, in modo
+da restare separato dal profilo personale e lasciarne libero l'indirizzo.
 
 ---
 
 ## Pubblicare il sito la prima volta
 
-Il repository deve chiamarsi **`vdeiuliis.github.io`**: è quello che dà
-l'indirizzo gratuito senza dover comprare un dominio.
+**1. Crea l'organizzazione.** Su GitHub: menu in alto a destra → *Your
+organizations* → **New organization** → piano **Free**. Chiamala esattamente
+`unacosabelladiieri`: il nome diventa l'indirizzo del sito. Alla richiesta di
+invitare altre persone, salta.
+
+**2. Crea il repository dentro l'organizzazione**, pubblico, chiamato
+`unacosabelladiieri.github.io` — stesso nome dell'organizzazione seguito da
+`.github.io`, è questo che gli fa prendere l'indirizzo alla radice. Senza
+README, senza `.gitignore`, senza licenza: il contenuto arriva dal computer.
+
+**3. Invia il codice:**
 
 ```bash
-git remote add origin https://github.com/vdeiuliis/vdeiuliis.github.io.git
 git push -u origin main
 ```
 
-Poi, nel repository: **Settings → Pages → Build and deployment → Source:
-GitHub Actions**.
+**4. Accendi la pubblicazione**: nel repository, **Settings → Pages → Build and
+deployment → Source: GitHub Actions**.
+
+**5. Attiva i commenti**: vedi più sotto, la sezione *I commenti*.
 
 Da qui in avanti ogni `git push` ripubblica il sito da solo, in un paio di
 minuti. Lo stato si vede nella scheda **Actions**.
@@ -185,11 +198,20 @@ Sono gestiti da [Giscus](https://giscus.app), che si appoggia alle
 **Discussions** del repository: gratis, senza server, senza pubblicità. Chi
 commenta deve avere un account GitHub.
 
-Repository e `repoId` sono già configurati in `src/site.config.ts`. Manca solo
-`categoryId`: si trova su <https://giscus.app>, inserendo
-`vdeiuliis/vdeiuliis.github.io` e copiando `data-category-id` dallo snippet che
-compare in fondo alla pagina (inizia con `DIC_`). Finché è vuoto, i commenti
-non compaiono.
+Vanno accesi una volta sola, dopo aver creato il repository:
+
+1. nel repository: **Settings → General → Features → Discussions**, spunta;
+2. installa <https://github.com/apps/giscus> sul repository
+   dell'organizzazione;
+3. vai su <https://giscus.app>, inserisci
+   `unacosabelladiieri/unacosabelladiieri.github.io` e scorri fino allo
+   snippet in fondo alla pagina;
+4. copia `data-repo-id` e `data-category-id` dentro `comments` in
+   [`src/site.config.ts`](src/site.config.ts);
+5. `git push`, e i commenti sono online.
+
+Finché quei due valori sono vuoti i commenti non compaiono, ma il resto del
+sito funziona normalmente.
 
 ---
 
