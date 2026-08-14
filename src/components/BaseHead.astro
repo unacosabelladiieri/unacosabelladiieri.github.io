@@ -1,0 +1,54 @@
+---
+import { site } from '../site.config';
+import { link } from '../lib/utils';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** immagine per le anteprime social */
+  image?: string;
+  /** true nelle pagine dei post: cambia og:type */
+  article?: boolean;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = site.description,
+  image,
+  article = false,
+  noindex = false,
+} = Astro.props;
+
+const titoloCompleto = title ? `${title} — ${site.title}` : site.title;
+const canonico = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const immagine = image ? new URL(image, Astro.site ?? Astro.url) : undefined;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{titoloCompleto}</title>
+<meta name="description" content={description} />
+<meta name="author" content={site.author} />
+<link rel="canonical" href={canonico} />
+{noindex && <meta name="robots" content="noindex, follow" />}
+
+<link rel="icon" href={link('/favicon.svg')} type="image/svg+xml" />
+<meta name="color-scheme" content="light dark" />
+
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={site.title}
+  href={new URL('rss.xml', Astro.site ?? Astro.url)}
+/>
+
+<meta property="og:type" content={article ? 'article' : 'website'} />
+<meta property="og:title" content={titoloCompleto} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonico} />
+<meta property="og:site_name" content={site.title} />
+<meta property="og:locale" content="it_IT" />
+{immagine && <meta property="og:image" content={immagine} />}
+<meta name="twitter:card" content={immagine ? 'summary_large_image' : 'summary'} />

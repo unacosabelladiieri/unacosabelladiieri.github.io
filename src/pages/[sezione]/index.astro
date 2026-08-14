@@ -1,0 +1,58 @@
+---
+/**
+ * Galleria di una sezione collaterale (Libri, Musica, Schermo, Viaggi).
+ *
+ * Le pagine vengono generate solo per le sezioni con `enabled: true` in
+ * src/site.config.ts: disattivarne una la fa sparire dal sito senza
+ * toccare i contenuti.
+ */
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import Scheda from '../../components/Scheda.astro';
+import { activeSections } from '../../site.config';
+import { perDataDecrescente, visibile } from '../../lib/utils';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const pagine = await Promise.all(
+    activeSections.map(async (sezione) => {
+      const voci = (await getCollection(sezione.slug))
+        .filter(visibile)
+        .sort(perDataDecrescente);
+      return { params: { sezione: sezione.slug }, props: { sezione, voci } };
+    }),
+  );
+  return pagine;
+};
+
+const { sezione, voci } = Astro.props;
+---
+
+<Base title={sezione.label} description={sezione.intro} ampio>
+  <h1>{sezione.label}</h1>
+  <p class="introduzione">{sezione.intro}</p>
+
+  {
+    voci.length > 0 ? (
+      <ul class="galleria">
+        {voci.map((v) => (
+          <Scheda
+            sezione={sezione.slug}
+            ratio={sezione.ratio}
+            id={v.id}
+            title={v.data.title}
+            subtitle={v.data.subtitle}
+            cover={v.data.cover}
+            coverAlt={v.data.coverAlt}
+            rating={v.data.rating}
+          />
+        ))}
+      </ul>
+    ) : (
+      <p class="vuoto">
+        Questa sezione è ancora vuota: le schede si aggiungono creando file in
+        <code>src/content/{sezione.slug}/</code>.
+      </p>
+    )
+  }
+</Base>

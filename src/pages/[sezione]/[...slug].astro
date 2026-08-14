@@ -1,0 +1,174 @@
+---
+/** Pagina di dettaglio di una scheda: copertina, testo e rimando al post. */
+import { getCollection, getEntry, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import { Image } from 'astro:assets';
+import Base from '../../layouts/Base.astro';
+import Comments from '../../components/Comments.astro';
+import { activeSections } from '../../site.config';
+import { link, dataEstesa, dataISO, visibile } from '../../lib/utils';
+
+import YouTube from '../../components/YouTube.astro';
+import Figure from '../../components/Figure.astro';
+import Audio from '../../components/Audio.astro';
+import Video from '../../components/Video.astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const gruppi = await Promise.all(
+    activeSections.map(async (sezione) => {
+      const voci = (await getCollection(sezione.slug)).filter(visibile);
+      return voci.map((voce) => ({
+        params: { sezione: sezione.slug, slug: voce.id },
+        props: { sezione, voce },
+      }));
+    }),
+  );
+  return gruppi.flat();
+};
+
+const { sezione, voce } = Astro.props;
+const { title, subtitle, cover, coverAlt, date, year, rating, post, link: esterno, linkLabel, tags } =
+  voce.data;
+
+const { Content } = await render(voce);
+
+// Il rimando al post viene mostrato solo se il post esiste davvero.
+const collegato = post ? await getEntry('posts', post) : undefined;
+---
+
+<Base title={title} description={subtitle} article image={cover?.src}>
+  <p class="briciole">
+    <a href={link(`/${sezione.slug}`)}>← {sezione.label}</a>
+  </p>
+
+  <article class="scheda-pagina">
+    {
+      cover && (
+        <div class="scheda-pagina__copertina">
+          <Image src={cover} alt={coverAlt ?? `Copertina di ${title}`} width={420} />
+        </div>
+      )
+    }
+
+    <div class="scheda-pagina__testo">
+      <header>
+        <h1>{title}</h1>
+        {subtitle && <p class="sottotitolo">{subtitle}{year && ` · ${year}`}</p>}
+        {
+          rating && (
+            <p class="voto" aria-label={`Valutazione: ${rating} su 5`}>
+              {'●'.repeat(rating)}
+              {'○'.repeat(5 - rating)}
+            </p>
+          )
+        }
+        <p class="data">
+          <time datetime={dataISO(date)}>{dataEstesa(date)}</time>
+        </p>
+      </header>
+
+      <div class="prosa">
+        <Content components={{ YouTube, Figure, Audio, Video }} />
+      </div>
+
+      <p class="rimandi">
+        {
+          collegato && (
+            <a href={link(`/blog/${collegato.id}`)}>
+              Ne ho scritto qui: {collegato.data.title} →
+            </a>
+          )
+        }
+        {
+          esterno && (
+            <a href={esterno} rel="noopener noreferrer nofollow" target="_blank">
+              {linkLabel ?? 'Collegamento esterno'} ↗
+            </a>
+          )
+        }
+      </p>
+
+      {
+        tags.length > 0 && (
+          <ul class="etichette">
+            {tags.map((t) => (
+              <li>
+                <a href={link(`/tag/${t}`)}>{t}</a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </article>
+
+  <Comments />
+</Base>
+
+<style>
+  .briciole {
+    font-family: var(--font-ui);
+    font-size: 0.875rem;
+    margin-block: 0 2rem;
+  }
+
+  .briciole a {
+    color: var(--testo-tenue);
+    text-decoration: none;
+  }
+
+  .briciole a:hover {
+    color: var(--accento);
+  }
+
+  .scheda-pagina {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 40rem) {
+    .scheda-pagina:has(.scheda-pagina__copertina) {
+      grid-template-columns: 210px 1fr;
+      align-items: start;
+      gap: 2.5rem;
+    }
+  }
+
+  .scheda-pagina__copertina img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--bordo);
+    border-radius: var(--raggio);
+    display: block;
+  }
+
+  .scheda-pagina h1 {
+    font-size: 1.6rem;
+  }
+
+  .sottotitolo {
+    color: var(--testo-tenue);
+    margin-block: 0.3rem 0;
+  }
+
+  header .data {
+    margin-top: 0.75rem;
+  }
+
+  header {
+    margin-bottom: 1.5rem;
+  }
+
+  .rimandi {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 2rem;
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+  }
+
+  .rimandi:empty {
+    display: none;
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import { site, activeSections } from '../site.config';
+import { link } from '../lib/utils';
+
+// Il menu si costruisce da solo: le sezioni collaterali compaiono
+// soltanto se attive in site.config.ts
+const voci = [
+  { href: link('/blog'), label: 'Blog' },
+  ...activeSections.map((s) => ({ href: link(`/${s.slug}`), label: s.label })),
+  { href: link('/chi-sono'), label: 'Chi sono' },
+];
+
+const percorso = Astro.url.pathname.replace(/\/$/, '');
+const attivo = (href: string) => {
+  const h = href.replace(/\/$/, '');
+  return percorso === h || percorso.startsWith(`${h}/`);
+};
+---
+
+<header class="testata">
+  <div class="contenitore contenitore--ampio testata__interno">
+    <p class="testata__titolo">
+      <a href={link('/')}>{site.title}</a>
+    </p>
+    <nav class="menu" aria-label="Navigazione principale">
+      {
+        voci.map((v) => (
+          <a href={v.href} aria-current={attivo(v.href) ? 'page' : undefined}>
+            {v.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

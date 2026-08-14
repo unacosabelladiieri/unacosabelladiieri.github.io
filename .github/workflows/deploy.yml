@@ -1,0 +1,40 @@
+name: Pubblica su GitHub Pages
+
+# Il sito si ricostruisce e va online a ogni push sul ramo principale.
+# Si può anche lanciare a mano dalla scheda "Actions" del repository.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Una pubblicazione alla volta; i push accumulati durante una build attendono.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Costruisci il sito
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v7
+      - name: Installa, costruisci e carica
+        uses: withastro/action@v6
+
+  deploy:
+    name: Pubblica
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pubblica su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

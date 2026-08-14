@@ -1,0 +1,152 @@
+---
+title: Come si scrive un post (promemoria per me)
+date: 2026-08-13
+description: Tutto quello che si può mettere dentro un post — foto, video, note vocali, formule — con gli esempi copiabili.
+tags: [appunti, istruzioni]
+math: true
+draft: false
+---
+
+Questo post è il mio promemoria: ogni cosa che il sito sa fare, con l'esempio
+accanto. Quando non ricordo come si incolla un video, torno qui.
+
+Volendo si può anche cancellare: sta in
+`src/content/posts/come-si-scrive-un-post.mdx`.
+
+## Il frontmatter
+
+In cima a ogni file, fra due righe di trattini:
+
+```yaml
+---
+title: Il titolo del post
+date: 2026-08-13
+description: Una riga che compare negli elenchi e nel feed.
+tags: [musica, trieste]
+math: true        # solo se il post contiene formule
+draft: true       # bozza: la vedo in locale, non finisce online
+comments: false   # per togliere i commenti da questo post
+---
+```
+
+Servono solo `title` e `date`. Il resto è facoltativo.
+
+Il nome del file diventa l'indirizzo: `come-si-scrive-un-post.mdx` →
+`/blog/come-si-scrive-un-post`.
+
+## Il testo
+
+Si scrive in Markdown, che è quasi solo testo normale: *corsivo* con un
+asterisco, **grassetto** con due, [un collegamento](https://astro.build) fra
+parentesi quadre e tonde.
+
+- elenchi puntati con un trattino
+- va a capo da solo
+
+1. e numerati con i numeri
+2. la numerazione si sistema da sé
+
+### Titoli
+
+Un cancelletto per il titolo grande, due per i paragrafi, tre per le
+sottosezioni. Il titolo del post arriva già dal frontmatter, quindi nel testo si
+comincia da `##`.
+
+## Le foto
+
+Il modo migliore è tenere la foto accanto al post, in una cartella con lo stesso
+nome, e importarla: così Astro la rimpicciolisce e la converte da sola.
+
+```mdx
+import tramonto from './come-si-scrive-un-post/tramonto.jpg';
+
+<Figure src={tramonto} alt="Il sole che cala dietro il molo">
+  Molo Audace, luglio
+</Figure>
+```
+
+Se invece la foto sta in `public/immagini/`, basta il percorso:
+
+```mdx
+<Figure src="/immagini/tramonto.jpg" alt="Il sole che cala dietro il molo" />
+```
+
+L'`alt` descrive l'immagine a chi non può vederla: vale la pena scriverlo bene.
+
+## I video
+
+Da YouTube serve solo il codice che sta dopo `v=` nell'indirizzo:
+
+```mdx
+<YouTube id="4hjLcRNlofY" title="Battisti — Il mio canto libero" />
+```
+
+<YouTube id="4hjLcRNlofY" title="Battisti — Il mio canto libero">
+  La didascalia è facoltativa e va fra i due tag.
+</YouTube>
+
+Funziona anche Vimeo: `<YouTube id="76979871" piattaforma="vimeo" />`.
+
+Per un video mio, caricato nel sito, c'è `<Video src="/video/mare.mp4" />` —
+ma sopra i 100 MB GitHub lo rifiuta, quindi per le cose lunghe meglio YouTube.
+
+## Le note vocali
+
+I file audio vanno in `public/audio/`. Va bene anche il `.m4a` che esce dai memo
+vocali del telefono:
+
+```mdx
+<Audio
+  src="/audio/nota-13-agosto.m4a"
+  titolo="Nota vocale, sul treno per Venezia"
+  nota="Due minuti di pensieri sconnessi sul finale del libro."
+/>
+```
+
+## Le formule
+
+Servono per le equazioni: si scrivono in LaTeX fra simboli di dollaro. In linea,
+$e^{i\pi} + 1 = 0$, oppure staccate dal testo con due dollari:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+$$
+
+Anche cose più elaborate:
+
+$$
+\begin{aligned}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+\nabla \times \mathbf{B} &= \mu_0\mathbf{J} + \mu_0\varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}
+\end{aligned}
+$$
+
+L'unica accortezza: mettere `math: true` nel frontmatter. Serve a caricare i
+caratteri di KaTeX soltanto nei post che ne hanno bisogno.
+
+Le formule vengono calcolate quando il sito si costruisce, non nel browser di
+chi legge: sono immediate e si vedono anche senza JavaScript.
+
+## Il codice
+
+Con tre apici, indicando il linguaggio:
+
+```python
+def cosa_bella(giorno):
+    """Restituisce una cosa bella del giorno, se ce n'è una."""
+    return next((c for c in giorno.cose if c.bella), None)
+```
+
+## Le tabelle
+
+| Cosa           | Dove va                | Come si richiama          |
+| -------------- | ---------------------- | ------------------------- |
+| Post           | `src/content/posts/`   | da solo                   |
+| Foto del post  | accanto al post        | `<Figure src={foto} />`   |
+| Audio          | `public/audio/`        | `<Audio src="/audio/…" />`|
+| Video proprio  | `public/video/`        | `<Video src="/video/…" />`|
+
+## Le bozze
+
+`draft: true` tiene il post fuori dal sito pubblico ma visibile mentre lavoro in
+locale. Quando è pronto, si toglie la riga.

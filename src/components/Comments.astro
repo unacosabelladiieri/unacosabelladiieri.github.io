@@ -1,0 +1,65 @@
+---
+/**
+ * Commenti tramite Giscus: si appoggiano alle GitHub Discussions del
+ * repository, quindi non serve alcun server e i commenti restano tuoi.
+ * Chi commenta deve avere un account GitHub.
+ *
+ * Le impostazioni stanno in src/site.config.ts (vedi le istruzioni lì).
+ */
+import { comments } from '../site.config';
+
+const configurato = comments.enabled && comments.repoId && comments.categoryId;
+---
+
+{
+  configurato && (
+    <section class="commenti">
+      <h2 class="commenti__titolo">Commenti</h2>
+      <script
+        src="https://giscus.app/client.js"
+        data-repo={comments.repo}
+        data-repo-id={comments.repoId}
+        data-category={comments.category}
+        data-category-id={comments.categoryId}
+        data-mapping={comments.mapping}
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang={comments.lang}
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+      />
+      <noscript>
+        Per leggere e scrivere commenti serve JavaScript attivo.
+      </noscript>
+    </section>
+  )
+}
+
+{
+  comments.enabled && !configurato && import.meta.env.DEV && (
+    <section class="commenti">
+      <p class="vuoto">
+        Commenti attivati ma non configurati: mancano `repoId` e `categoryId` in
+        src/site.config.ts. Prendili da https://giscus.app. (Questo avviso si
+        vede solo in locale.)
+      </p>
+    </section>
+  )
+}
+
+<style>
+  .commenti {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--bordo);
+  }
+
+  .commenti__titolo {
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+</style>

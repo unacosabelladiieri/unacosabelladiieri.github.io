@@ -1,0 +1,56 @@
+---
+/** Una copertina cliccabile nella galleria di una sezione. */
+import { Image } from 'astro:assets';
+import { link } from '../lib/utils';
+import type { Section } from '../site.config';
+
+interface Props {
+  sezione: Section['slug'];
+  ratio: Section['ratio'];
+  id: string;
+  title: string;
+  subtitle?: string;
+  cover?: ImageMetadata;
+  coverAlt?: string;
+  rating?: number;
+}
+
+const { sezione, ratio, id, title, subtitle, cover, coverAlt, rating } =
+  Astro.props;
+
+const proporzioni = {
+  portrait: '2 / 3',
+  square: '1 / 1',
+  landscape: '3 / 2',
+} as const;
+---
+
+<li class="scheda" style={`--proporzione: ${proporzioni[ratio]}`}>
+  <a href={link(`/${sezione}/${id}`)}>
+    <div class="scheda__copertina">
+      {
+        cover ? (
+          <Image
+            src={cover}
+            alt={coverAlt ?? `Copertina di ${title}`}
+            width={400}
+            loading="lazy"
+            decoding="async"
+          />
+        ) : (
+          <div class="scheda__vuota">{title}</div>
+        )
+      }
+    </div>
+    <h2 class="scheda__titolo">{title}</h2>
+    {subtitle && <p class="scheda__sottotitolo">{subtitle}</p>}
+    {
+      rating && (
+        <p class="voto" aria-label={`Valutazione: ${rating} su 5`}>
+          {'●'.repeat(rating)}
+          {'○'.repeat(5 - rating)}
+        </p>
+      )
+    }
+  </a>
+</li>

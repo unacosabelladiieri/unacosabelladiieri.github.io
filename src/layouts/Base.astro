@@ -1,0 +1,35 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../site.config';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  article?: boolean;
+  noindex?: boolean;
+  /** true = contenuto a tutta larghezza (gallerie), false = colonna di lettura */
+  ampio?: boolean;
+}
+
+const { ampio = false, ...head } = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.lang}>
+  <head>
+    <BaseHead {...head} />
+  </head>
+  <body>
+    <a class="salta-al-contenuto" href="#contenuto">Salta al contenuto</a>
+    <Header />
+    <main id="contenuto">
+      <div class:list={['contenitore', ampio && 'contenitore--ampio']}>
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

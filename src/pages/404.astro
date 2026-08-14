@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import { link } from '../lib/utils';
+---
+
+<Base title="Pagina non trovata" noindex>
+  <h1>Qui non c'è niente</h1>
+  <p class="introduzione">
+    La pagina che cercavi non esiste, o non esiste più.
+  </p>
+  <p>
+    <a href={link('/')}>Torna alla home</a> · <a href={link('/blog')}>Vai al blog</a>
+  </p>
+</Base>

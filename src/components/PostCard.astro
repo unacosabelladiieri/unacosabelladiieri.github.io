@@ -1,0 +1,48 @@
+---
+/** Una voce nell'elenco dei post. */
+import type { CollectionEntry } from 'astro:content';
+import { link, dataEstesa, dataISO } from '../lib/utils';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, date, description, tags, draft } = post.data;
+---
+
+<li>
+  <article>
+    <time class="data" datetime={dataISO(date)}>{dataEstesa(date)}</time>
+    {draft && <span class="bozza">bozza</span>}
+    <h2 class="voce__titolo">
+      <a href={link(`/blog/${post.id}`)}>{title}</a>
+    </h2>
+    {description && <p class="voce__descrizione">{description}</p>}
+    {
+      tags.length > 0 && (
+        <ul class="etichette">
+          {tags.map((t) => (
+            <li>
+              <a href={link(`/tag/${t}`)}>{t}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </article>
+</li>
+
+<style>
+  .bozza {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accento);
+    border: 1px solid var(--accento);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+    margin-left: 0.5rem;
+  }
+</style>

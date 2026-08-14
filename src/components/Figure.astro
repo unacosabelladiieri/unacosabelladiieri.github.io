@@ -1,0 +1,42 @@
+---
+/**
+ * Immagine con didascalia.
+ *
+ * Immagine importata (consigliato: viene ottimizzata in fase di build)
+ *
+ *   import foto from './foto.jpg';
+ *   <Figure src={foto} alt="Il porto al tramonto">Molo Audace, luglio</Figure>
+ *
+ * Immagine in public/
+ *
+ *   <Figure src="/immagini/foto.jpg" alt="Il porto al tramonto" />
+ */
+import { Image } from 'astro:assets';
+import { link } from '../lib/utils';
+
+interface Props {
+  src: ImageMetadata | string;
+  alt: string;
+  /** larghezza massima in pixel; oltre, l'immagine viene rimpicciolita */
+  larghezza?: number;
+}
+
+const { src, alt, larghezza = 900 } = Astro.props;
+const esterna = typeof src === 'string';
+---
+
+<figure>
+  {
+    esterna ? (
+      <img
+        src={src.startsWith('http') ? src : link(src)}
+        {alt}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <Image src={src} {alt} width={larghezza} loading="lazy" decoding="async" />
+    )
+  }
+  {Astro.slots.has('default') && <figcaption><slot /></figcaption>}
+</figure>

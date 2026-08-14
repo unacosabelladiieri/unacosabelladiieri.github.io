@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site.config';
+---
+
+<Base
+  title="Chi sono"
+  description={`Due parole su ${site.author} e su ${site.title}.`}
+>
+  <h1>Chi sono</h1>
+
+  <div class="prosa">
+    <p>
+      Mi chiamo {site.author}. Questo è il posto dove tengo nota di una cosa
+      bella al giorno: qualcosa che ho letto, ascoltato, visto o attraversato, e
+      che non voglio lasciare andare via.
+    </p>
+
+    <p>
+      Nessuna cadenza fissa, nessun argomento escluso.
+    </p>
+
+    <p>
+      <em>
+        (Questa pagina si modifica in <code>src/pages/chi-sono.astro</code>.)
+      </em>
+    </p>
+  </div>
+</Base>

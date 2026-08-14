@@ -1,0 +1,56 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+import { perDataDecrescente, visibile } from '../../lib/utils';
+
+const post = (await getCollection('posts')).filter(visibile).sort(perDataDecrescente);
+
+// raggruppati per anno, dal più recente
+const perAnno = post.reduce<Record<number, typeof post>>((acc, p) => {
+  const anno = p.data.date.getUTCFullYear();
+  (acc[anno] ??= []).push(p);
+  return acc;
+}, {});
+
+const anni = Object.keys(perAnno)
+  .map(Number)
+  .sort((a, b) => b - a);
+---
+
+<Base title="Blog" description="Tutti i post, dal più recente.">
+  <h1>Blog</h1>
+  <p class="introduzione">
+    {post.length === 1 ? 'Un post' : `${post.length} post`}, dal più recente.
+  </p>
+
+  {post.length === 0 && <p class="vuoto">Ancora niente da leggere.</p>}
+
+  {
+    anni.map((anno) => (
+      <section class="anno">
+        <h2 class="anno__titolo">{anno}</h2>
+        <ul class="elenco">
+          {perAnno[anno].map((p) => (
+            <PostCard post={p} />
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</Base>
+
+<style>
+  .anno + .anno {
+    margin-top: 3.5rem;
+  }
+
+  .anno__titolo {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--testo-tenue);
+    margin-block: 0 1.25rem;
+  }
+</style>

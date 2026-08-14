@@ -1,0 +1,33 @@
+---
+import { site } from '../site.config';
+import { link } from '../lib/utils';
+
+const anno = new Date().getFullYear();
+
+const collegamenti = [
+  site.social.email && { href: `mailto:${site.social.email}`, label: 'Email' },
+  site.social.github && {
+    href: `https://github.com/${site.social.github}`,
+    label: 'GitHub',
+  },
+  site.social.instagram && {
+    href: `https://instagram.com/${site.social.instagram}`,
+    label: 'Instagram',
+  },
+  { href: link('/rss.xml'), label: 'RSS' },
+].filter(Boolean) as { href: string; label: string }[];
+---
+
+<footer class="pie">
+  <div class="contenitore contenitore--ampio pie__interno">
+    <p>© {anno} {site.author}</p>
+    <nav aria-label="Collegamenti secondari">
+      {collegamenti.map((c, i) => (
+        <>
+          {i > 0 && ' · '}
+          <a href={c.href}>{c.label}</a>
+        </>
+      ))}
+    </nav>
+  </div>
+</footer>

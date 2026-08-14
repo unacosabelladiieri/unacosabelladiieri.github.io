@@ -1,0 +1,89 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import { site, activeSections } from '../site.config';
+import { link, perDataDecrescente, visibile } from '../lib/utils';
+
+const QUANTI = 8;
+
+const tutti = (await getCollection('posts')).filter(visibile).sort(perDataDecrescente);
+const ultimi = tutti.slice(0, QUANTI);
+---
+
+<Base>
+  <h1>{site.title}</h1>
+  <p class="introduzione">{site.description}</p>
+
+  {
+    ultimi.length > 0 ? (
+      <ul class="elenco">
+        {ultimi.map((post) => (
+          <PostCard {post} />
+        ))}
+      </ul>
+    ) : (
+      <p class="vuoto">
+        Ancora nessun post. Il primo si scrive creando un file in
+        <code>src/content/posts/</code>.
+      </p>
+    )
+  }
+
+  {
+    tutti.length > QUANTI && (
+      <p class="altro">
+        <a href={link('/blog')}>Tutti i post ({tutti.length}) →</a>
+      </p>
+    )
+  }
+
+  {
+    activeSections.length > 0 && (
+      <nav class="sezioni" aria-label="Sezioni">
+        {activeSections.map((s) => (
+          <a href={link(`/${s.slug}`)}>
+            <strong>{s.label}</strong>
+            <span>{s.intro}</span>
+          </a>
+        ))}
+      </nav>
+    )
+  }
+</Base>
+
+<style>
+  .altro {
+    margin-top: 2.5rem;
+    font-family: var(--font-ui);
+    font-size: 0.9rem;
+  }
+
+  .sezioni {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--bordo);
+    display: grid;
+    gap: 1rem;
+  }
+
+  .sezioni a {
+    display: grid;
+    gap: 0.15rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .sezioni strong {
+    font-weight: 600;
+  }
+
+  .sezioni a:hover strong {
+    color: var(--accento);
+  }
+
+  .sezioni span {
+    color: var(--testo-tenue);
+    font-size: 0.9375rem;
+  }
+</style>
