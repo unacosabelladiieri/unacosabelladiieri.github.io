@@ -8,11 +8,6 @@ import Comments from '../../components/Comments.astro';
 import { activeSections } from '../../site.config';
 import { link, dataEstesa, dataISO, visibile } from '../../lib/utils';
 
-import YouTube from '../../components/YouTube.astro';
-import Figure from '../../components/Figure.astro';
-import Audio from '../../components/Audio.astro';
-import Video from '../../components/Video.astro';
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const gruppi = await Promise.all(
     activeSections.map(async (sezione) => {
@@ -68,7 +63,7 @@ const collegato = post ? await getEntry('posts', post) : undefined;
       </header>
 
       <div class="prosa">
-        <Content components={{ YouTube, Figure, Audio, Video }} />
+        <Content />
       </div>
 
       <p class="rimandi">

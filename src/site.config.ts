@@ -11,15 +11,15 @@ export const site = {
   author: 'Vittorio',
   lang: 'it',
   /**
-   * URL pubblico del sito. Da aggiornare con il proprio username GitHub.
+   * URL pubblico del sito.
    * Per un sito utente (repo "username.github.io") basta questo.
-   * Per un repo di progetto va valorizzato anche `base` in astro.config.mjs.
+   * Per un repo di progetto va valorizzato anche `base` in astro.config.ts.
    */
-  url: 'https://USERNAME.github.io',
+  url: 'https://vdeiuliis.github.io',
   // Mostrati nel footer. Lascia stringa vuota per nascondere una voce.
   social: {
     email: '',
-    github: '',
+    github: 'vdeiuliis',
     instagram: '',
   },
 } as const;
@@ -37,10 +37,13 @@ export const site = {
  *  5. metti `enabled: true`.
  */
 export const comments = {
-  enabled: false,
-  repo: 'USERNAME/USERNAME.github.io',
-  repoId: '',
+  enabled: true,
+  repo: 'vdeiuliis/vdeiuliis.github.io',
+  repoId: 'MDEwOlJlcG9zaXRvcnkzNDkxNjcxNDY=',
   category: 'Announcements',
+  // ⚠️ Ultimo pezzo mancante: copia `data-category-id` dallo snippet che
+  // giscus.app genera per il tuo repository e incollalo qui (inizia con DIC_).
+  // Finché è vuoto i commenti non compaiono.
   categoryId: '',
   // 'pathname' associa la discussione all'URL del post
   mapping: 'pathname',

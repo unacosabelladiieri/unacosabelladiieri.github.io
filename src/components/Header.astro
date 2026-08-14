@@ -1,6 +1,7 @@
 ---
 import { site, activeSections } from '../site.config';
 import { link } from '../lib/utils';
+import ThemeToggle from './ThemeToggle.astro';
 
 // Il menu si costruisce da solo: le sezioni collaterali compaiono
 // soltanto se attive in site.config.ts
@@ -30,6 +31,7 @@ const attivo = (href: string) => {
           </a>
         ))
       }
+      <ThemeToggle />
     </nav>
   </div>
 </header>

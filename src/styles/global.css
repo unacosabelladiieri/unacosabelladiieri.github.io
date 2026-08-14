@@ -5,14 +5,38 @@
 */
 
 :root {
-  /* colori — tema chiaro */
-  --sfondo: #fbfaf7;
-  --sfondo-tenue: #f2f0ea;
-  --testo: #22201d;
-  --testo-tenue: #6b6660;
-  --bordo: #e2ded4;
-  --accento: #8a4b34;
-  --accento-tenue: #b5735a;
+  /* I colori veri stanno solo qui: le due palette per intero. */
+  --chiaro-sfondo: #fbfaf7;
+  --chiaro-sfondo-tenue: #f2f0ea;
+  --chiaro-testo: #22201d;
+  --chiaro-testo-tenue: #6b6660;
+  --chiaro-bordo: #e2ded4;
+  --chiaro-accento: #8a4b34;
+  --chiaro-accento-tenue: #b5735a;
+
+  --scuro-sfondo: #16151a;
+  --scuro-sfondo-tenue: #1f1e24;
+  --scuro-testo: #e6e2da;
+  --scuro-testo-tenue: #9a948b;
+  --scuro-bordo: #302e37;
+  --scuro-accento: #d8977a;
+  --scuro-accento-tenue: #b5735a;
+
+  /* in mancanza di indicazioni si parte dal chiaro */
+  --sfondo: var(--chiaro-sfondo);
+  --sfondo-tenue: var(--chiaro-sfondo-tenue);
+  --testo: var(--chiaro-testo);
+  --testo-tenue: var(--chiaro-testo-tenue);
+  --bordo: var(--chiaro-bordo);
+  --accento: var(--chiaro-accento);
+  --accento-tenue: var(--chiaro-accento-tenue);
+
+  /* colori del codice: li fornisce Shiki, qui si sceglie quale coppia usare */
+  --codice-testo: var(--shiki-light);
+  --codice-sfondo: var(--shiki-light-bg);
+  --codice-stile: var(--shiki-light-font-style);
+  --codice-peso: var(--shiki-light-font-weight);
+  --codice-decorazione: var(--shiki-light-text-decoration);
 
   /* tipografia */
   --font-testo: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua',
@@ -28,16 +52,43 @@
   --raggio: 3px;
 }
 
+/*
+  Il tema segue il sistema, a meno che il lettore non abbia premuto il tasto
+  in alto a destra: in quel caso `data-theme` sull'elemento <html> comanda e
+  la scelta resta salvata nel browser.
+*/
 @media (prefers-color-scheme: dark) {
-  :root {
-    --sfondo: #16151a;
-    --sfondo-tenue: #1f1e24;
-    --testo: #e6e2da;
-    --testo-tenue: #9a948b;
-    --bordo: #302e37;
-    --accento: #d8977a;
-    --accento-tenue: #b5735a;
+  :root:not([data-theme='chiaro']) {
+    --sfondo: var(--scuro-sfondo);
+    --sfondo-tenue: var(--scuro-sfondo-tenue);
+    --testo: var(--scuro-testo);
+    --testo-tenue: var(--scuro-testo-tenue);
+    --bordo: var(--scuro-bordo);
+    --accento: var(--scuro-accento);
+    --accento-tenue: var(--scuro-accento-tenue);
+
+    --codice-testo: var(--shiki-dark);
+    --codice-sfondo: var(--shiki-dark-bg);
+    --codice-stile: var(--shiki-dark-font-style);
+    --codice-peso: var(--shiki-dark-font-weight);
+    --codice-decorazione: var(--shiki-dark-text-decoration);
   }
+}
+
+:root[data-theme='scuro'] {
+  --sfondo: var(--scuro-sfondo);
+  --sfondo-tenue: var(--scuro-sfondo-tenue);
+  --testo: var(--scuro-testo);
+  --testo-tenue: var(--scuro-testo-tenue);
+  --bordo: var(--scuro-bordo);
+  --accento: var(--scuro-accento);
+  --accento-tenue: var(--scuro-accento-tenue);
+
+  --codice-testo: var(--shiki-dark);
+  --codice-sfondo: var(--shiki-dark-bg);
+  --codice-stile: var(--shiki-dark-font-style);
+  --codice-peso: var(--shiki-dark-font-weight);
+  --codice-decorazione: var(--shiki-dark-text-decoration);
 }
 
 *,
@@ -124,6 +175,7 @@ main {
 .menu {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1.25rem;
   font-family: var(--font-ui);
   font-size: 0.875rem;
@@ -292,16 +344,60 @@ h3 {
   text-align: left;
 }
 
-/* blocchi di codice: tema scuro quando il sistema lo è */
-@media (prefers-color-scheme: dark) {
-  .prosa .astro-code,
-  .prosa .astro-code span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
-  }
+/* i blocchi di codice seguono il tema scelto sopra */
+.prosa .astro-code,
+.prosa .astro-code span {
+  color: var(--codice-testo) !important;
+  background-color: var(--codice-sfondo) !important;
+  font-style: var(--codice-stile) !important;
+  font-weight: var(--codice-peso) !important;
+  text-decoration: var(--codice-decorazione) !important;
+}
+
+/* video incorporati da YouTube o Vimeo */
+.prosa .incorporato {
+  margin-inline: 0;
+}
+
+.prosa .incorporato__cornice {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--sfondo-tenue);
+  border-radius: var(--raggio);
+  overflow: hidden;
+}
+
+.prosa .incorporato iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* note vocali e tracce audio */
+.prosa .audio {
+  margin-inline: 0;
+  padding: 1rem 1.15rem;
+  background: var(--sfondo-tenue);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+}
+
+.prosa .audio__titolo {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.prosa .audio audio {
+  width: 100%;
+  display: block;
+}
+
+.prosa video {
+  background: #000;
 }
 
 /* formule in blocco: scorrono da sole se troppo larghe */

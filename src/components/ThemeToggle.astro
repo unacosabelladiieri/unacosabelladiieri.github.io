@@ -1,0 +1,111 @@
+---
+/**
+ * Tasto per passare dal tema chiaro a quello scuro.
+ *
+ * Senza averlo mai premuto, il sito segue le impostazioni del sistema.
+ * Al primo tocco la scelta viene salvata nel browser e ha la precedenza;
+ * il tasto "Sistema" nel menu contestuale non serve — per tornare al
+ * comportamento automatico basta cancellare i dati del sito.
+ */
+---
+
+<button
+  id="tasto-tema"
+  type="button"
+  class="tasto-tema"
+  aria-label="Cambia tema"
+  title="Cambia tema"
+>
+  <svg class="icona icona--sole" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="4.2"></circle>
+    <path
+      d="M12 2.5v2.2M12 19.3v2.2M4.2 12H2M22 12h-2.2M6.3 6.3 4.8 4.8M19.2 19.2l-1.5-1.5M17.7 6.3l1.5-1.5M4.8 19.2l1.5-1.5"
+    ></path>
+  </svg>
+  <svg class="icona icona--luna" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20 14.5A8.2 8.2 0 0 1 9.5 4 8.3 8.3 0 1 0 20 14.5z"></path>
+  </svg>
+</button>
+
+<style>
+  .tasto-tema {
+    background: none;
+    border: 1px solid transparent;
+    border-radius: var(--raggio);
+    color: var(--testo-tenue);
+    cursor: pointer;
+    padding: 0.3rem;
+    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tasto-tema:hover {
+    color: var(--testo);
+    border-color: var(--bordo);
+  }
+
+  .icona {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* si mostra l'icona di dove si andrà a finire, non di dove si è */
+  .icona--sole {
+    display: none;
+  }
+
+  :global(:root[data-theme='scuro']) .icona--sole {
+    display: block;
+  }
+
+  :global(:root[data-theme='scuro']) .icona--luna {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme='chiaro'])) .icona--sole {
+      display: block;
+    }
+
+    :global(:root:not([data-theme='chiaro'])) .icona--luna {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const CHIAVE = 'tema';
+
+  const sistemaScuro = () =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  /** Il tema che si vede adesso, comunque ci si sia arrivati. */
+  const temaAttuale = (): 'chiaro' | 'scuro' => {
+    const salvato = localStorage.getItem(CHIAVE);
+    if (salvato === 'chiaro' || salvato === 'scuro') return salvato;
+    return sistemaScuro() ? 'scuro' : 'chiaro';
+  };
+
+  const applica = (tema: 'chiaro' | 'scuro') => {
+    document.documentElement.dataset.theme = tema;
+    localStorage.setItem(CHIAVE, tema);
+
+    // se i commenti sono caricati, cambiano tema anche loro
+    const giscus = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+    giscus?.contentWindow?.postMessage(
+      { giscus: { setConfig: { theme: tema === 'scuro' ? 'dark' : 'light' } } },
+      'https://giscus.app',
+    );
+  };
+
+  document.getElementById('tasto-tema')?.addEventListener('click', () => {
+    applica(temaAttuale() === 'scuro' ? 'chiaro' : 'scuro');
+  });
+</script>

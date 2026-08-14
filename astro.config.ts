@@ -4,6 +4,9 @@ import sitemap from '@astrojs/sitemap';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+// @ts-expect-error — plugin locale in JavaScript, senza tipi
+import { remarkMedia } from './src/lib/remark-media.mjs';
+
 import { site } from './src/site.config';
 
 export default defineConfig({
@@ -22,9 +25,11 @@ export default defineConfig({
   ],
 
   markdown: {
-    // $...$ in linea e $$...$$ in blocco, resi in HTML durante la build:
-    // nessun JavaScript da caricare nel browser.
-    remarkPlugins: [remarkMath],
+    // remarkMedia: foto con didascalia, note vocali, video e YouTube
+    //   scritti in Markdown normale (vedi src/lib/remark-media.mjs).
+    // remarkMath: $...$ in linea e $$...$$ in blocco, resi in HTML durante
+    //   la build — nessun JavaScript da caricare nel browser.
+    remarkPlugins: [remarkMedia, remarkMath],
     rehypePlugins: [[rehypeKatex, { strict: false }]],
     shikiConfig: {
       themes: { light: 'github-light', dark: 'github-dark' },

@@ -37,6 +37,15 @@ const immagine = image ? new URL(image, Astro.site ?? Astro.url) : undefined;
 <link rel="icon" href={link('/favicon.svg')} type="image/svg+xml" />
 <meta name="color-scheme" content="light dark" />
 
+{/* Applica il tema salvato prima che la pagina venga disegnata: senza
+    questo, chi ha scelto il tema scuro vedrebbe un lampo di bianco. */}
+<script is:inline>
+  (() => {
+    const t = localStorage.getItem('tema');
+    if (t === 'chiaro' || t === 'scuro') document.documentElement.dataset.theme = t;
+  })();
+</script>
+
 <link
   rel="alternate"
   type="application/rss+xml"

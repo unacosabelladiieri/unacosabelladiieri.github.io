@@ -8,10 +8,12 @@ import { glob } from 'astro/loaders';
 const posts = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/posts' }),
   schema: ({ image }) =>
-    z.object({
+    z
+      .object({
       title: z.string(),
-      // data di pubblicazione, es. 2026-08-14
-      date: z.coerce.date(),
+      /** data di pubblicazione, es. 2026-08-14 — va bene anche `pubDate` */
+      date: z.coerce.date().optional(),
+      pubDate: z.coerce.date().optional(),
       updated: z.coerce.date().optional(),
       /** riassunto: appare nell'elenco, nei metadati social e nel feed RSS */
       description: z.string().optional(),
@@ -25,7 +27,19 @@ const posts = defineCollection({
       comments: z.boolean().default(true),
       /** true = carica il CSS di KaTeX su questo post (per le formule) */
       math: z.boolean().default(false),
-    }),
+      })
+      // `date` e `pubDate` sono intercambiabili: vale quella che c'è
+      .transform((dati, ctx) => {
+        const date = dati.date ?? dati.pubDate;
+        if (!date) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: 'Manca la data: aggiungi `date` (o `pubDate`) nel frontmatter.',
+          });
+          return z.NEVER;
+        }
+        return { ...dati, date };
+      }),
 });
 
 /**
