@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# personale
+README_personal.md
+
 # dependencies
 node_modules/
 
