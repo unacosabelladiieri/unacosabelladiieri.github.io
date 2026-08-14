@@ -5,9 +5,13 @@ description: Una gran serie, e Chicago
 cover: ./bear.jpeg
 tags:
   - serie
+  - città
+  - cibo
 coverAlt: The Bear
 ---
-![[pequod.jpeg]]Quasi due anni fa io e G. ci eravamo imbarcati nell'impresa di iniziare questa serie incasinata, allucinata, disordinata, ansiogena: The Bear. Non la cosa più tranquilla da guardare per rilassarsi dopo cena, ma una volta iniziata ci sembrò difficile metterla da parte, e finimmo per *divorare* le prime due stagioni. 
+![[pequod.jpeg]]
+
+Quasi due anni fa io e G. ci eravamo imbarcati nell'impresa di iniziare questa serie incasinata, allucinata, disordinata, ansiogena: The Bear. Non la cosa più tranquilla da guardare per rilassarsi dopo cena, ma una volta iniziata ci sembrò difficile metterla da parte, e finimmo per *divorare* le prime due stagioni. 
 
 Un anno fa esatto eravamo a Chicago, la città di The Bear, quasi non ricordandolo. Chicago è una delle città più belle che io abbia mai visto, indescrivibile nella sua geografia e architettura, tra le più iconiche e identitarie che mi vengano in mente.
 
