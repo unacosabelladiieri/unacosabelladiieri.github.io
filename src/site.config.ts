@@ -30,6 +30,25 @@ export const site = {
 } as const;
 
 /**
+ * Statistiche di lettura, tenute da GoatCounter: quante visite, quali pagine,
+ * da dove arrivano. Sono private (le vedi solo tu, entrando nel tuo pannello),
+ * non usa cookie e non profila nessuno — quindi niente banner da mettere.
+ *
+ * Per accenderle:
+ *  1. apri un account gratuito su https://www.goatcounter.com (piano
+ *     "Personal", gratuito per uso non commerciale);
+ *  2. scegli un codice per il sito: diventerà l'indirizzo del tuo pannello,
+ *     per esempio `cosabella` → https://cosabella.goatcounter.com;
+ *  3. scrivi quel codice qui sotto, in `codice`.
+ *
+ * Con `codice` vuoto non viene caricato nulla: il sito resta senza alcuno
+ * script di terzi.
+ */
+export const statistiche = {
+  codice: '',
+} as const;
+
+/**
  * Commenti tramite Giscus (GitHub Discussions): gratuito, senza server e
  * senza tracciamento pubblicitario.
  *

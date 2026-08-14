@@ -6,6 +6,9 @@ dist/
 # personale
 README_personal.md
 
+# impostazioni locali di Obsidian: non riguardano il sito
+.obsidian/
+
 # dependencies
 node_modules/
 

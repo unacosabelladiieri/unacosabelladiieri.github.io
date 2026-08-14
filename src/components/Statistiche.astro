@@ -1,0 +1,25 @@
+---
+/**
+ * Conteggio delle visite con GoatCounter: circa 3 KB, senza cookie,
+ * senza dati personali. Le istruzioni per accenderlo stanno in
+ * src/site.config.ts, sotto `statistiche`.
+ *
+ * Se `codice` è vuoto questo componente non emette nulla, quindi il sito
+ * non contatta alcun servizio esterno.
+ */
+import { statistiche } from '../site.config';
+
+const attivo = Boolean(statistiche.codice);
+const endpoint = `https://${statistiche.codice}.goatcounter.com/count`;
+---
+
+{
+  attivo && (
+    <script
+      is:inline
+      data-goatcounter={endpoint}
+      async
+      src="https://gc.zgo.at/count.js"
+    />
+  )
+}

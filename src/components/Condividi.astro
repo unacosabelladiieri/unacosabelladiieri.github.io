@@ -1,0 +1,208 @@
+---
+/**
+ * Tasti di condivisione in fondo ai post.
+ *
+ * Su telefono compare "Condividi", che apre il menu di sistema: da lì passano
+ * tutte le app installate, Instagram e Telegram comprese. Su computer quel
+ * menu non esiste, quindi restano i collegamenti diretti più "copia link".
+ *
+ * Nessuno di questi tasti carica codice altrui: sono normali link, quindi
+ * Facebook e gli altri non sanno che sei passato di qui finché non ci clicchi.
+ */
+interface Props {
+  titolo: string;
+  /** indirizzo pubblico del post */
+  url: string;
+}
+
+const { titolo, url } = Astro.props;
+
+const t = encodeURIComponent(titolo);
+const u = encodeURIComponent(url);
+
+const destinazioni = [
+  {
+    nome: 'WhatsApp',
+    href: `https://wa.me/?text=${t}%20${u}`,
+    // fumetto
+    d: 'M4 20.5 5.4 16A7.6 7.6 0 1 1 8.4 19z',
+  },
+  {
+    nome: 'Facebook',
+    href: `https://www.facebook.com/sharer/sharer.php?u=${u}`,
+    // "f"
+    d: 'M15.5 3.5h-2.2A3.8 3.8 0 0 0 9.5 7.3V10H7.2v3h2.3v7.5h3V13h2.4l.5-3h-2.9V7.6c0-.6.4-1.1 1-1.1h2z',
+  },
+  {
+    nome: 'Email',
+    href: `mailto:?subject=${t}&body=${u}`,
+    // busta
+    d: 'M3.5 5.5h17v13h-17zM3.5 6.5l8.5 6.5 8.5-6.5',
+  },
+];
+---
+
+<div class="condividi">
+  <span class="condividi__etichetta">Condividi</span>
+
+  <div class="condividi__tasti">
+    {
+      destinazioni.map((d) => (
+        <a
+          class="condividi__tasto"
+          href={d.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={`Condividi su ${d.nome}`}
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d={d.d} />
+          </svg>
+          <span class="sr">{d.nome}</span>
+        </a>
+      ))
+    }
+
+    <button class="condividi__tasto" type="button" data-copia={url} title="Copia il link">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10 13.5a3.5 3.5 0 0 0 5 0l3-3a3.5 3.5 0 0 0-5-5l-1 1" />
+        <path d="M14 10.5a3.5 3.5 0 0 0-5 0l-3 3a3.5 3.5 0 0 0 5 5l1-1" />
+      </svg>
+      <span class="sr">Copia il link</span>
+    </button>
+
+    <button
+      class="condividi__tasto condividi__tasto--sistema"
+      type="button"
+      data-condividi
+      hidden
+      title="Condividi…"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 15.5V4M8.5 7.5 12 4l3.5 3.5" />
+        <path d="M5.5 12.5v6a1.5 1.5 0 0 0 1.5 1.5h10a1.5 1.5 0 0 0 1.5-1.5v-6" />
+      </svg>
+      <span class="sr">Condividi con un'app</span>
+    </button>
+  </div>
+
+  <span class="condividi__esito" role="status" aria-live="polite"></span>
+</div>
+
+<style>
+  .condividi {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--bordo);
+  }
+
+  .condividi__etichetta {
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--testo-tenue);
+  }
+
+  .condividi__tasti {
+    display: flex;
+    gap: 0.35rem;
+  }
+
+  .condividi__tasto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid var(--bordo);
+    border-radius: var(--raggio);
+    background: none;
+    color: var(--testo-tenue);
+    cursor: pointer;
+  }
+
+  .condividi__tasto:hover {
+    color: var(--accento);
+    border-color: var(--accento);
+  }
+
+  /* senza questa riga il `display` qui sopra vincerebbe su `hidden`
+     e il tasto di sistema comparirebbe anche dove non funziona */
+  .condividi__tasto[hidden] {
+    display: none;
+  }
+
+  .condividi__tasto svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .condividi__esito {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: var(--accento);
+  }
+
+  /* visibile solo ai lettori di schermo */
+  .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
+
+<script>
+  // "Condividi…" compare solo dove il menu di sistema esiste davvero
+  const sistema = document.querySelector<HTMLButtonElement>('[data-condividi]');
+  if (sistema && navigator.share) {
+    sistema.hidden = false;
+    sistema.addEventListener('click', () => {
+      navigator
+        .share({ title: document.title, url: location.href })
+        .catch(() => {}); // l'utente ha annullato: nulla da fare
+    });
+  }
+
+  const copia = document.querySelector<HTMLButtonElement>('[data-copia]');
+  const esito = document.querySelector<HTMLElement>('.condividi__esito');
+
+  /**
+   * Il metodo moderno ha bisogno di un permesso che qualche browser nega;
+   * quello vecchio è brutto ma non è mai stato rifiutato da nessuno.
+   */
+  const negliAppunti = async (testo: string): Promise<boolean> => {
+    try {
+      await navigator.clipboard.writeText(testo);
+      return true;
+    } catch {
+      const campo = document.createElement('textarea');
+      campo.value = testo;
+      campo.setAttribute('readonly', '');
+      campo.style.cssText = 'position:fixed;top:-9999px;opacity:0';
+      document.body.appendChild(campo);
+      campo.select();
+      const riuscito = document.execCommand('copy');
+      campo.remove();
+      return riuscito;
+    }
+  };
+
+  copia?.addEventListener('click', async () => {
+    const riuscito = await negliAppunti(copia.dataset.copia ?? location.href);
+    if (!esito) return;
+    esito.textContent = riuscito ? 'Link copiato' : 'Copia non riuscita';
+    setTimeout(() => (esito.textContent = ''), 2500);
+  });
+</script>

@@ -1,0 +1,47 @@
+---
+/**
+ * Piccolo segno grafico: un sole eclissato fra due linee sottili.
+ * Puramente decorativo, quindi invisibile ai lettori di schermo.
+ *
+ * La "morsicatura" della luna è un secondo cerchio del colore dello sfondo:
+ * così il fregio funziona da solo sia sul tema chiaro sia su quello scuro.
+ */
+---
+
+<div class="fregio" aria-hidden="true">
+  <span class="fregio__linea"></span>
+  <svg class="fregio__segno" viewBox="0 0 24 24" width="20" height="20">
+    <circle cx="11" cy="12" r="6.5" class="fregio__sole"></circle>
+    <circle cx="16.5" cy="8.5" r="5.5" class="fregio__luna"></circle>
+  </svg>
+  <span class="fregio__linea"></span>
+</div>
+
+<style>
+  .fregio {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-block: 2.5rem 3rem;
+  }
+
+  .fregio__linea {
+    flex: 1;
+    height: 1px;
+    background: var(--bordo);
+  }
+
+  .fregio__segno {
+    flex: none;
+    overflow: visible;
+  }
+
+  .fregio__sole {
+    fill: var(--accento);
+    opacity: 0.85;
+  }
+
+  .fregio__luna {
+    fill: var(--sfondo);
+  }
+</style>

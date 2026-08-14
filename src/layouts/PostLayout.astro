@@ -4,6 +4,7 @@ import { Image } from 'astro:assets';
 import Base from './Base.astro';
 import Comments from '../components/Comments.astro';
 import MathStyles from '../components/MathStyles.astro';
+import Condividi from '../components/Condividi.astro';
 import { link, dataEstesa, dataISO } from '../lib/utils';
 
 interface Props {
@@ -65,6 +66,11 @@ const { title, date, updated, description, cover, coverAlt, tags, math } =
         </ul>
       )
     }
+
+    <Condividi
+      titolo={title}
+      url={new URL(Astro.url.pathname, Astro.site ?? Astro.url).href}
+    />
   </article>
 
   {post.data.comments && <Comments />}
