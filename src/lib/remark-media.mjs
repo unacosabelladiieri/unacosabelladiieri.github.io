@@ -14,6 +14,8 @@
  * niente si rompe da nessuna delle due parti.
  */
 import { visit } from 'unist-util-visit';
+import { existsSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
 
 const AUDIO = ['.mp3', '.m4a', '.wav', '.ogg', '.oga', '.aac', '.flac', '.opus'];
 const VIDEO = ['.mp4', '.webm', '.mov', '.m4v'];
@@ -78,8 +80,66 @@ const lettoreIncorporato = (src, titolo) => `
   ${titolo ? `<figcaption>${scappa(titolo)}</figcaption>` : ''}
 </figure>`;
 
+/** `![[foto.jpeg]]` e `![[foto.jpeg|didascalia]]`, come li scrive Obsidian. */
+const WIKILINK = /!\[\[([^\]|]+?)(?:\|([^\]]*))?\]\]/g;
+
+/**
+ * Traduce i collegamenti Wiki in immagini vere.
+ *
+ * Se il file richiamato non è accanto al post, il testo viene lasciato
+ * com'è e la build avvisa: meglio un avviso in fondo al terminale che
+ * l'intero sito che non si costruisce per una foto rimasta indietro.
+ */
+function espandiWikilink(figli, cartella) {
+  const risultato = [];
+
+  for (const figlio of figli) {
+    if (figlio.type !== 'text' || !figlio.value.includes('![[')) {
+      risultato.push(figlio);
+      continue;
+    }
+
+    let da = 0;
+    for (const trovato of figlio.value.matchAll(WIKILINK)) {
+      const [intero, nome, didascalia] = trovato;
+      const prima = figlio.value.slice(da, trovato.index);
+      if (prima) risultato.push({ type: 'text', value: prima });
+
+      const file = nome.trim();
+      if (cartella && existsSync(resolve(cartella, file))) {
+        risultato.push({
+          type: 'image',
+          url: `./${file}`,
+          alt: didascalia?.trim() || '',
+          title: null,
+        });
+      } else {
+        console.warn(
+          `[remark-media] immagine non trovata accanto al post: "${file}" — ` +
+            `copiala in ${cartella ?? 'la cartella del post'}`,
+        );
+        risultato.push({ type: 'text', value: intero });
+      }
+
+      da = trovato.index + intero.length;
+    }
+
+    const resto = figlio.value.slice(da);
+    if (resto) risultato.push({ type: 'text', value: resto });
+  }
+
+  return risultato;
+}
+
 export function remarkMedia() {
-  return (tree) => {
+  return (tree, file) => {
+    const cartella = file?.path ? dirname(file.path) : null;
+
+    // 0. I collegamenti Wiki diventano immagini, prima di ogni altra cosa.
+    visit(tree, 'paragraph', (paragrafo) => {
+      paragrafo.children = espandiWikilink(paragrafo.children, cartella);
+    });
+
     // 1. Audio e video scritti come immagini: diventano lettori veri.
     //    Va fatto prima di tutto il resto, così non finiscono dentro un <figure>.
     visit(tree, 'paragraph', (paragrafo) => {
