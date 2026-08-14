@@ -3,7 +3,13 @@ title: Una cosa bella di ieri
 date: 2026-08-14
 description: Perché ho aperto questo posto e cosa contiene.
 tags: [appunti]
+draft: true
 ---
+
+<!-- Bozza: l'ho scritta io per riempire il sito, quindi resta nascosta.
+     Riscrivila come vuoi e togli `draft: true` per pubblicarla,
+     oppure cancella il file. -->
+
 
 C'è un esercizio che faccio da un po': la sera, prima di chiudere gli occhi,
 provo a mettere a fuoco una cosa bella della giornata. Non deve essere grande.
