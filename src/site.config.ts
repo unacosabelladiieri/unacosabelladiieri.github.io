@@ -44,7 +44,7 @@ export const comments = {
   // ⚠️ Ultimo pezzo mancante: copia `data-category-id` dallo snippet che
   // giscus.app genera per il tuo repository e incollalo qui (inizia con DIC_).
   // Finché è vuoto i commenti non compaiono.
-  categoryId: '',
+  categoryId: 'DIC_kwDOFM_eKs4DDXJo',
   // 'pathname' associa la discussione all'URL del post
   mapping: 'pathname',
   lang: 'it',

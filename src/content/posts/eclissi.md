@@ -19,8 +19,8 @@ C'è un posto paradossale sulla Costa Adriatica che affaccia dove il sole sorge 
 
 Qualche metro prima del promontorio, a Punta Aderci, sono tornati dopo un po' di anni i girasoli. Hanno scelto la stagione sbagliata, bruciati da un agosto infernale. Contrariati da tutto questo sole, se ne sono stati indifferenti a guardare dall'altra parte, incuranti di tutta questa gente che cercava di bruciarsi le retine per sottrarle allo stillicidio quotidiano di meraviglia e oscenità.
 
-![](girasoli.jpeg)
+![Gli indifferenti, girasoli voltano le spalle all'eclissi](girasoli.jpeg)
 
 Punta Aderci è stato il posto ideale dove godersi lo spettacolo in quel quarto d'ora di tregua concessoci dalle nuvole prima di sfidare la luna a chi sapesse toglierci più luce. A volte è proprio così: è stato bello, finché è durato.
 
-![](tramonto.jpeg)
+![Eclissi al tramonto sul trabocco di Punta Aderci](tramonto.jpeg)
