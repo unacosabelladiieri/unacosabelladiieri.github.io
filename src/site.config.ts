@@ -45,7 +45,7 @@ export const site = {
  * Con `chiave` vuota il modulo non compare.
  */
 export const contatto = {
-  chiave: '',
+  chiave: '5f83928f-dcf3-4253-ab0b-be7651136bf6',
   invito: 'Se vuoi scrivermi due righe, questo modulo me le recapita.',
 } as const;
 
