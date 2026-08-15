@@ -31,6 +31,25 @@ export const site = {
 } as const;
 
 /**
+ * Iscrizione via email, appoggiata a Buttondown.
+ *
+ * Il modulo qui sotto è un normale form HTML: manda l'indirizzo a Buttondown
+ * e basta, senza caricare script loro nel sito. Chi si iscrive riceve una
+ * mail di conferma (doppio consenso), quindi la lista resta pulita.
+ *
+ * Il piano gratuito copre i primi 100 iscritti e l'invio manuale: quando esce
+ * un post, scrivi l'email dal pannello di Buttondown e la mandi. L'invio
+ * automatico a ogni pubblicazione è invece un'aggiunta a pagamento.
+ *
+ * Con `utente` vuoto il modulo non compare da nessuna parte.
+ */
+export const newsletter = {
+  /** il tuo nome utente su buttondown.com */
+  utente: '',
+  invito: 'Se ti va, ti avviso io quando esce qualcosa di nuovo.',
+} as const;
+
+/**
  * Statistiche di lettura, tenute da GoatCounter: quante visite, quali pagine,
  * da dove arrivano. Sono private (le vedi solo tu, entrando nel tuo pannello),
  * non usa cookie e non profila nessuno — quindi niente banner da mettere.

@@ -5,6 +5,7 @@ import Base from './Base.astro';
 import Comments from '../components/Comments.astro';
 import MathStyles from '../components/MathStyles.astro';
 import Condividi from '../components/Condividi.astro';
+import Iscriviti from '../components/Iscriviti.astro';
 import { link, dataEstesa, dataISO } from '../lib/utils';
 
 interface Props {
@@ -71,6 +72,8 @@ const { title, date, updated, description, cover, coverAlt, tags, math } =
       titolo={title}
       url={new URL(Astro.url.pathname, Astro.site ?? Astro.url).href}
     />
+
+    <Iscriviti />
   </article>
 
   {post.data.comments && <Comments />}

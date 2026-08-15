@@ -1,0 +1,115 @@
+---
+/**
+ * Modulo di iscrizione alla newsletter (Buttondown).
+ *
+ * È un form HTML e nient'altro: nessuno script di terzi, nessun cookie.
+ * L'indirizzo parte solo quando qualcuno preme "Iscriviti", e la conferma
+ * avviene su Buttondown, in una scheda a parte, così chi legge non perde
+ * il segno nella pagina.
+ *
+ * Le impostazioni stanno in src/site.config.ts, sotto `newsletter`.
+ */
+import { newsletter } from '../site.config';
+import { link } from '../lib/utils';
+
+const attivo = Boolean(newsletter.utente);
+const azione = `https://buttondown.com/api/emails/subscribe/${newsletter.utente}`;
+---
+
+{
+  attivo && (
+    <section class="iscriviti">
+      <p class="iscriviti__invito">{newsletter.invito}</p>
+
+      <form class="iscriviti__form" action={azione} method="post" target="_blank">
+        <label class="sr" for="email-iscrizione">
+          Il tuo indirizzo email
+        </label>
+        <input
+          class="iscriviti__campo"
+          id="email-iscrizione"
+          type="email"
+          name="email"
+          placeholder="la tua email"
+          autocomplete="email"
+          required
+        />
+        <button class="iscriviti__tasto" type="submit">
+          Iscriviti
+        </button>
+      </form>
+
+      <p class="iscriviti__nota">
+        Riceverai una mail per confermare. Niente altro, e ci si cancella
+        quando si vuole. In alternativa c'è il <a href={link('/rss.xml')}>feed RSS</a>,
+        che non chiede nulla a nessuno.
+      </p>
+    </section>
+  )
+}
+
+<style>
+  .iscriviti {
+    margin-top: 3rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--bordo);
+  }
+
+  .iscriviti__invito {
+    margin: 0 0 0.9rem;
+    font-size: 1rem;
+  }
+
+  .iscriviti__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .iscriviti__campo {
+    flex: 1 1 15rem;
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    padding: 0.5rem 0.7rem;
+    color: var(--testo);
+    background: var(--sfondo);
+    border: 1px solid var(--bordo);
+    border-radius: var(--raggio);
+  }
+
+  .iscriviti__campo:focus {
+    border-color: var(--accento);
+  }
+
+  .iscriviti__tasto {
+    font-family: var(--font-ui);
+    font-size: 0.9375rem;
+    padding: 0.5rem 1.1rem;
+    color: var(--sfondo);
+    background: var(--accento);
+    border: 1px solid var(--accento);
+    border-radius: var(--raggio);
+    cursor: pointer;
+  }
+
+  .iscriviti__tasto:hover {
+    background: var(--accento-tenue);
+    border-color: var(--accento-tenue);
+  }
+
+  .iscriviti__nota {
+    margin: 0.75rem 0 0;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--testo-tenue);
+  }
+
+  .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>
