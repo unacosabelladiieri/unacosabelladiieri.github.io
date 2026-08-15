@@ -63,8 +63,8 @@ export const contatto = {
  * Con `utente` vuoto il modulo non compare da nessuna parte.
  */
 export const newsletter = {
-  /** il tuo nome utente su buttondown.com */
-  utente: 'vdeiuliis',
+  /** il tuo nome utente su buttondown.com — compare nell'indirizzo del modulo */
+  utente: 'unacosabelladiieri',
   invito: 'Se ti va, ti avviso io quando esce qualcosa di nuovo.',
 } as const;
 

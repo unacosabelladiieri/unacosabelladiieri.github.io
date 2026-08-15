@@ -3,9 +3,13 @@
  * Modulo di iscrizione alla newsletter (Buttondown).
  *
  * È un form HTML e nient'altro: nessuno script di terzi, nessun cookie.
- * L'indirizzo parte solo quando qualcuno preme "Iscriviti", e la conferma
- * avviene su Buttondown, in una scheda a parte, così chi legge non perde
- * il segno nella pagina.
+ * L'indirizzo parte solo quando qualcuno preme "Iscriviti".
+ *
+ * Il modulo si apre in una scheda nuova e non viene inviato di nascosto
+ * perché Buttondown, per difendersi dai programmi automatici, mostra una
+ * pagina con un tasto "Verify and Subscribe" da premere a mano: senza quel
+ * passaggio l'iscrizione non si completa. Chi legge, intanto, non perde il
+ * segno nella pagina.
  *
  * Le impostazioni stanno in src/site.config.ts, sotto `newsletter`.
  */
@@ -13,7 +17,8 @@ import { newsletter } from '../site.config';
 import { link } from '../lib/utils';
 
 const attivo = Boolean(newsletter.utente);
-const azione = `https://buttondown.com/api/emails/subscribe/${newsletter.utente}`;
+// l'endpoint giusto è "embed-subscribe": "subscribe" risponde 404
+const azione = `https://buttondown.com/api/emails/embed-subscribe/${newsletter.utente}`;
 ---
 
 {
@@ -34,15 +39,16 @@ const azione = `https://buttondown.com/api/emails/subscribe/${newsletter.utente}
           autocomplete="email"
           required
         />
+        <input type="hidden" name="embed" value="1" />
         <button class="iscriviti__tasto" type="submit">
           Iscriviti
         </button>
       </form>
 
       <p class="iscriviti__nota">
-        Riceverai una mail per confermare. Niente altro, e ci si cancella
-        quando si vuole. In alternativa c'è il <a href={link('/rss.xml')}>feed RSS</a>,
-        che non chiede nulla a nessuno.
+        Si apre una scheda per confermare, poi arriva una mail di verifica.
+        Niente altro, e ci si cancella quando si vuole. In alternativa c'è il
+        <a href={link('/rss.xml')}>feed RSS</a>, che non chiede nulla a nessuno.
       </p>
     </section>
   )
