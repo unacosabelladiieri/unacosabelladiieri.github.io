@@ -5,10 +5,16 @@ import ThemeToggle from './ThemeToggle.astro';
 
 // Il menu si costruisce da solo: le sezioni collaterali compaiono
 // soltanto se attive in site.config.ts
-const voci = [
+// `titolo` serve quando l'etichetta da sola non si spiega: chi naviga con un
+// lettore di schermo sentirebbe soltanto "punto interrogativo".
+const voci: { href: string; label: string; titolo?: string }[] = [
   { href: link('/blog'), label: 'Blog' },
   ...activeSections.map((s) => ({ href: link(`/${s.slug}`), label: s.label })),
-  { href: link('/chi-sono'), label: 'Chi sono' },
+  {
+    href: link('/cos-e-questo-micro-blog'),
+    label: '?',
+    titolo: "Cos'è questo micro-blog",
+  },
 ];
 
 const percorso = Astro.url.pathname.replace(/\/$/, '');
@@ -26,7 +32,12 @@ const attivo = (href: string) => {
     <nav class="menu" aria-label="Navigazione principale">
       {
         voci.map((v) => (
-          <a href={v.href} aria-current={attivo(v.href) ? 'page' : undefined}>
+          <a
+            href={v.href}
+            aria-current={attivo(v.href) ? 'page' : undefined}
+            aria-label={v.titolo}
+            title={v.titolo}
+          >
             {v.label}
           </a>
         ))
