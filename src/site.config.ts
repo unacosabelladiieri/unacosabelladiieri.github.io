@@ -31,6 +31,25 @@ export const site = {
 } as const;
 
 /**
+ * Modulo "scrivimi", appoggiato a Web3Forms.
+ *
+ * Il tuo indirizzo non compare da nessuna parte nel sito: sta solo negli
+ * archivi di Web3Forms, che gira i messaggi alla tua casella. Nel codice
+ * resta soltanto la chiave qui sotto, che non rivela l'indirizzo.
+ *
+ * Per accenderlo: vai su https://web3forms.com, inserisci
+ * vdeiuliis@hotmail.it e ti arriverà una chiave (una stringa lunga tipo
+ * "a1b2c3d4-...") da incollare qui. Non serve creare un account.
+ * Il piano gratuito copre 250 messaggi al mese.
+ *
+ * Con `chiave` vuota il modulo non compare.
+ */
+export const contatto = {
+  chiave: '',
+  invito: 'Se vuoi scrivermi due righe, questo modulo me le recapita.',
+} as const;
+
+/**
  * Iscrizione via email, appoggiata a Buttondown.
  *
  * Il modulo qui sotto è un normale form HTML: manda l'indirizzo a Buttondown
@@ -45,7 +64,7 @@ export const site = {
  */
 export const newsletter = {
   /** il tuo nome utente su buttondown.com */
-  utente: '',
+  utente: 'vdeiuliis',
   invito: 'Se ti va, ti avviso io quando esce qualcosa di nuovo.',
 } as const;
 
