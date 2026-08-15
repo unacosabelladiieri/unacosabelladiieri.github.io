@@ -46,9 +46,15 @@ const azione = `https://buttondown.com/api/emails/embed-subscribe/${newsletter.u
       </form>
 
       <p class="iscriviti__nota">
-        Si apre una scheda per confermare, poi arriva una mail di verifica.
-        Niente altro, e ci si cancella quando si vuole. In alternativa c'è il
-        <a href={link('/rss.xml')}>feed RSS</a>, che non chiede nulla a nessuno.
+        Si apre una scheda dove confermare, poi arriva una mail di verifica da
+        cliccare: <strong>controlla anche nella posta indesiderata</strong>, è lì
+        che finisce quasi sempre. Senza quel clic l'iscrizione resta a metà e non
+        ti arriva niente.
+      </p>
+      <p class="iscriviti__nota">
+        Poi più nulla, se non un avviso quando pubblico; ci si cancella quando si
+        vuole. In alternativa c'è il <a href={link('/rss.xml')}>feed RSS</a>, che
+        non chiede né email né conferme.
       </p>
     </section>
   )
@@ -107,7 +113,17 @@ const azione = `https://buttondown.com/api/emails/embed-subscribe/${newsletter.u
     margin: 0.75rem 0 0;
     font-family: var(--font-ui);
     font-size: 0.8125rem;
+    line-height: 1.5;
     color: var(--testo-tenue);
+  }
+
+  .iscriviti__nota + .iscriviti__nota {
+    margin-top: 0.5rem;
+  }
+
+  .iscriviti__nota strong {
+    color: var(--testo);
+    font-weight: 600;
   }
 
   .sr {
