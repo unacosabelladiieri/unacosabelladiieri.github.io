@@ -63,9 +63,14 @@ content:
         default: false
         description: Se acceso, il post resta invisibile online.
 
+      # Editor con i pulsanti (grassetto, link, elenchi), che scrive il
+      # markdown da sé. Comodo da telefono, ma quando apre un post già
+      # scritto lo rilegge e lo riscrive nella sua forma: attenzione ai
+      # collegamenti ![[wiki]], alle formule fra dollari e agli indirizzi
+      # YouTube lasciati nudi su una riga.
+      # Per tornare all'area di testo semplice: type: text
       - name: body
         label: Testo
-        type: text
+        type: rich-text
         description: >-
-          Markdown, come in Obsidian. Le foto si richiamano con
-          ![descrizione](allegati/foto.jpg)
+          Le foto si richiamano con ![descrizione](allegati/foto.jpg)
