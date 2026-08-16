@@ -5,11 +5,11 @@ import PostCard from '../components/PostCard.astro';
 import Fregio from '../components/Fregio.astro';
 import Iscriviti from '../components/Iscriviti.astro';
 import { site, activeSections } from '../site.config';
-import { link, perDataDecrescente, visibile } from '../lib/utils';
+import { link, perDataDecrescente, elencabile } from '../lib/utils';
 
 const QUANTI = 8;
 
-const tutti = (await getCollection('posts')).filter(visibile).sort(perDataDecrescente);
+const tutti = (await getCollection('posts')).filter(elencabile).sort(perDataDecrescente);
 const ultimi = tutti.slice(0, QUANTI);
 ---
 

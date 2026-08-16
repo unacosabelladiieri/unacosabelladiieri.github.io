@@ -3,10 +3,10 @@ import { getCollection } from 'astro:content';
 import type { APIContext } from 'astro';
 
 import { site } from '../site.config';
-import { perDataDecrescente, visibile } from '../lib/utils';
+import { perDataDecrescente, elencabile } from '../lib/utils';
 
 export async function GET(context: APIContext) {
-  const post = (await getCollection('posts')).filter(visibile).sort(perDataDecrescente);
+  const post = (await getCollection('posts')).filter(elencabile).sort(perDataDecrescente);
 
   return rss({
     title: site.title,

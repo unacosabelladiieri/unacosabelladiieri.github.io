@@ -37,7 +37,21 @@ export function perDataDecrescente<T extends { data: { date: Date } }>(
 /**
  * In produzione nasconde le bozze; durante `npm run dev` restano visibili,
  * così puoi rileggerle prima di pubblicarle.
+ *
+ * Decide quali pagine vengono generate.
  */
 export function visibile(voce: { data: { draft?: boolean } }): boolean {
   return import.meta.env.DEV || !voce.data.draft;
+}
+
+/**
+ * Chi compare negli elenchi, nel feed e nelle pagine delle etichette.
+ *
+ * Esclude anche i post `unlisted`: quelli restano raggiungibili col loro
+ * indirizzo, ma non si presentano da soli a chi legge.
+ */
+export function elencabile(voce: {
+  data: { draft?: boolean; unlisted?: boolean };
+}): boolean {
+  return visibile(voce) && !voce.data.unlisted;
 }

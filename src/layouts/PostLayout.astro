@@ -22,7 +22,7 @@ const { title, date, updated, description, cover, coverAlt, tags, math } =
   {description}
   article
   image={cover?.src}
-  noindex={post.data.draft}
+  noindex={post.data.draft || post.data.unlisted}
 >
   {math && <MathStyles />}
 

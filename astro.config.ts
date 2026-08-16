@@ -8,6 +8,10 @@ import rehypeKatex from 'rehype-katex';
 import { remarkMedia } from './src/lib/remark-media.mjs';
 // @ts-expect-error — integrazione locale in JavaScript, senza tipi
 import { mediaAccantoAiPost } from './src/lib/media-accanto-ai-post.mjs';
+// @ts-expect-error — modulo locale in JavaScript, senza tipi
+import { slugNonElencati } from './src/lib/non-elencati.mjs';
+
+const nonElencati: string[] = slugNonElencati();
 
 import { site } from './src/site.config';
 
@@ -23,9 +27,14 @@ export default defineConfig({
     mdx(),
     // porta nel sito le note vocali e i video tenuti accanto ai post
     mediaAccantoAiPost(),
-    // le pagine delle etichette sono solo un aiuto alla navigazione:
-    // restano fuori dalla sitemap, come dichiarano già con noindex
-    sitemap({ filter: (pagina) => !pagina.includes('/tag/') }),
+    // Fuori dalla sitemap: le pagine delle etichette, che sono solo un aiuto
+    // alla navigazione, e i post non elencati. Entrambi lo dichiarano già
+    // con noindex; qui si evita anche di segnalarli ai motori.
+    sitemap({
+      filter: (pagina) =>
+        !pagina.includes('/tag/') &&
+        !nonElencati.some((slug) => pagina.includes(`/blog/${slug}`)),
+    }),
   ],
 
   markdown: {

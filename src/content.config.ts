@@ -35,8 +35,14 @@ const posts = defineCollection({
         .optional(),
       coverAlt: z.string().optional(),
       tags: z.array(z.string()).default([]),
-      /** true = non compare in elenchi, feed e sitemap */
+      /** true = non viene proprio pubblicato: si vede solo in locale */
       draft: z.boolean().default(false),
+      /**
+       * true = pubblicato e raggiungibile da chiunque abbia l'indirizzo, ma
+       * fuori dagli elenchi, dal feed e dai motori di ricerca. Serve per le
+       * pagine di servizio, tipo il promemoria su come si scrivono i post.
+       */
+      unlisted: z.boolean().default(false),
       /** false = nasconde i commenti su questo singolo post */
       comments: z.boolean().default(true),
       /** true = carica il CSS di KaTeX su questo post (per le formule) */

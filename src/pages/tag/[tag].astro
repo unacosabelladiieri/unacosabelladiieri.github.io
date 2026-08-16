@@ -3,10 +3,10 @@ import { getCollection } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import Base from '../../layouts/Base.astro';
 import PostCard from '../../components/PostCard.astro';
-import { link, perDataDecrescente, visibile } from '../../lib/utils';
+import { link, perDataDecrescente, elencabile } from '../../lib/utils';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const post = (await getCollection('posts')).filter(visibile);
+  const post = (await getCollection('posts')).filter(elencabile);
   const etichette = [...new Set(post.flatMap((p) => p.data.tags))];
 
   return etichette.map((tag) => ({

@@ -4,15 +4,16 @@ date: 2026-08-13
 description: Tutto quello che si può mettere dentro un post — foto, video, note vocali, formule — con gli esempi copiabili.
 tags: [appunti, istruzioni]
 math: true
-draft: true
+unlisted: true
 ---
 
 Questo post è il mio promemoria: ogni cosa che il sito sa fare, con l'esempio
 accanto. Quando non ricordo come si incolla un video, torno qui.
 
-È una **bozza**: la vedo solo io, aprendo il sito in locale con `npm run dev`.
-Online non compare e non finisce né nel feed né in Google. Per pubblicarlo
-basterebbe togliere la riga `draft: true`.
+Sta online ma **non è elencato**: non compare in home, né nell'archivio, né
+nel feed, e i motori di ricerca hanno istruzione di ignorarlo. Ci arrivo solo
+io, da questo indirizzo, anche dal telefono. È la riga `unlisted: true` nel
+frontmatter a tenerlo in disparte.
 
 Tutto è Markdown normale, quindi si può scrivere in Obsidian senza sorprese.
 

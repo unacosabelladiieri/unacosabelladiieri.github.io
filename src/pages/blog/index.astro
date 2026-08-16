@@ -2,9 +2,9 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import PostCard from '../../components/PostCard.astro';
-import { perDataDecrescente, visibile } from '../../lib/utils';
+import { perDataDecrescente, elencabile } from '../../lib/utils';
 
-const post = (await getCollection('posts')).filter(visibile).sort(perDataDecrescente);
+const post = (await getCollection('posts')).filter(elencabile).sort(perDataDecrescente);
 
 // raggruppati per anno, dal più recente
 const perAnno = post.reduce<Record<number, typeof post>>((acc, p) => {
