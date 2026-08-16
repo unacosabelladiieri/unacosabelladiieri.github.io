@@ -21,4 +21,6 @@ Troppe le cose da scrivere su Chicago e sul cibo di Chicago (per non andare trop
 
 Dopo quasi due anni dall'ultimo episodio visto, ho iniziato ieri la terza stagione di The Bear, con i suoi flashback sui fatti raccontati (e non raccontati) nelle prime due. Ci ho ritrovato tutta la bellezza che ricordavo, qualche rimando all'incredibile episodio *Fishes*, tra i più belli di qualsiasi serie tv io abbia visto, con una Jamie Lee Curtis da cineteca. E tutto l'ambiente di clinica perfezione dell'alta cucina che mi spaventa e un po' mi seduce. E Chicago, meravigliosa, indimenticabile Chicago.
 
+https://www.youtube.com/watch?v=QDaJ1V_JCYA
+
 https://www.youtube.com/watch?v=8uq6ZoYfemA
