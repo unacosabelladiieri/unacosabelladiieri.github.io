@@ -6,7 +6,7 @@ cover: ./allegati/bear.jpg
 tags:
   - Luoghi
   - Cibo
-  - serie
+  - Serie
 coverAlt: The Bear
 ---
 Quasi due anni fa io e G. ci eravamo imbarcati nell'impresa di iniziare questa serie incasinata, allucinata, disordinata, ansiogena: The Bear. Non la cosa più tranquilla da guardare per rilassarsi dopo cena, ma una volta iniziata ci sembrò difficile metterla da parte, e finimmo per *divorare* le prime due stagioni. 
