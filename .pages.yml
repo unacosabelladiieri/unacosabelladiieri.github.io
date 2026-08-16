@@ -18,6 +18,9 @@ content:
     path: src/content/posts
     filename: '{fields.title}.md'
     extension: md
+    # la cartella allegati non contiene post: le foto si gestiscono
+    # dalla sezione Media, non da qui
+    subfolders: false
     # i post più recenti in cima
     view:
       fields: [title, pubDate, draft]

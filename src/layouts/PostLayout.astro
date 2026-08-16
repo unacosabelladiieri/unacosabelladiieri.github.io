@@ -72,11 +72,13 @@ const { title, date, updated, description, cover, coverAlt, tags, math } =
       titolo={title}
       url={new URL(Astro.url.pathname, Astro.site ?? Astro.url).href}
     />
-
-    <Iscriviti />
   </article>
 
   {post.data.comments && <Comments />}
+
+  {/* L'invito arriva per ultimo: chi ha letto il post e magari i commenti
+      è la persona più disposta a lasciare il proprio indirizzo. */}
+  <Iscriviti />
 </Base>
 
 <style>

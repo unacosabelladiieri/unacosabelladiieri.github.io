@@ -3,7 +3,6 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import Fregio from '../components/Fregio.astro';
-import Iscriviti from '../components/Iscriviti.astro';
 import { site, activeSections } from '../site.config';
 import { link, perDataDecrescente, elencabile } from '../lib/utils';
 
@@ -41,8 +40,6 @@ const ultimi = tutti.slice(0, QUANTI);
       </p>
     )
   }
-
-  <Iscriviti />
 
   {
     activeSections.length > 0 && (
