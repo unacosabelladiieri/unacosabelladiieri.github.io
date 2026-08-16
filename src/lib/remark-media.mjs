@@ -97,10 +97,12 @@ function incorporabile(url) {
 
 const nodoHtml = (value) => ({ type: 'html', value });
 
+// preload="metadata": il lettore mostra subito la durata invece di restare
+// muto fino al play, e se il file non c'è il problema si vede all'istante
 const lettoreAudio = (url, titolo) => `
 <figure class="audio">
   ${titolo ? `<p class="audio__titolo">${scappa(titolo)}</p>` : ''}
-  <audio controls preload="none" src="${scappa(url)}">
+  <audio controls preload="metadata" src="${scappa(url)}">
     <a href="${scappa(url)}">Scarica l'audio</a>
   </audio>
 </figure>`;
