@@ -2,7 +2,7 @@
 title: The Bear
 pubDate: 2026-08-14
 description: Una gran serie, e Chicago
-cover: ./bear.jpg
+cover: ./allegati/bear.jpg
 tags:
   - Luoghi
   - Cibo

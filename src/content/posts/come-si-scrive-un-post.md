@@ -58,25 +58,34 @@ Un cancelletto per il titolo grande, due per i paragrafi, tre per le
 sottosezioni. Il titolo del post arriva già dal frontmatter, quindi nel testo si
 comincia da `##`.
 
+## Dove vanno foto, audio e video
+
+Tutti in `src/content/posts/allegati/`, in un mucchio solo. In Obsidian si
+imposta una volta e poi non ci si pensa più: *Impostazioni → File e
+collegamenti → Percorso predefinito per i nuovi allegati → **nella cartella
+specificata sotto***, e lì si scrive `allegati`.
+
+Funziona anche tenerli accanto al post, se un giorno preferissi così: il sito
+li cerca in tutti e due i posti.
+
 ## Le foto
 
-Si mettono accanto al post, nella stessa cartella, e si richiamano come in
-qualsiasi Markdown:
+Si richiamano come in qualsiasi Markdown:
 
 ```markdown
-![Il sole che cala dietro il molo](tramonto.jpeg)
+![Il sole che cala dietro il molo](allegati/tramonto.jpeg)
 ```
 
 Se dopo il nome del file si aggiunge una frase fra virgolette, quella diventa la
 didascalia sotto la foto:
 
 ```markdown
-![Il sole che cala dietro il molo](tramonto.jpeg "Molo Audace, luglio")
+![Il sole che cala dietro il molo](allegati/tramonto.jpeg "Molo Audace, luglio")
 ```
 
 E viene fuori così:
 
-![Il sole che cala su un trabocco](tramonto.jpeg "Punta Aderci, 12 agosto")
+![Il sole che cala su un trabocco](allegati/tramonto.jpeg "Punta Aderci, 12 agosto")
 
 Il testo fra parentesi quadre è la descrizione per chi non può vedere
 l'immagine: vale la pena scriverla comunque.
@@ -102,18 +111,18 @@ Per un video mio si usa la sintassi delle immagini, che il sito riconosce
 dall'estensione:
 
 ```markdown
-![](mare.mp4)
+![](allegati/mare.mp4)
 ```
 
 Sopra i 100 MB GitHub rifiuta il file, quindi per le cose lunghe meglio YouTube.
 
 ## Le note vocali
 
-Uguale, con il file audio accanto al post — va bene il `.m4a` dei memo vocali
-del telefono:
+Uguale, con il file in `allegati/` — va bene il `.m4a` dei memo vocali del
+telefono:
 
 ```markdown
-![Nota vocale, sul treno per Venezia](nota-13-agosto.m4a)
+![Nota vocale, sul treno per Venezia](allegati/nota-13-agosto.m4a)
 ```
 
 Il testo fra parentesi quadre diventa il titolo sopra al lettore.
@@ -155,13 +164,13 @@ def cosa_bella(giorno):
 
 ## Le tabelle
 
-| Cosa          | Come si scrive                    |
-| ------------- | --------------------------------- |
-| Foto          | `![descrizione](foto.jpeg)`       |
-| Didascalia    | `![descrizione](foto.jpeg "…")`   |
-| Nota vocale   | `![titolo](nota.m4a)`             |
-| Video mio     | `![](mare.mp4)`                   |
-| YouTube       | l'indirizzo su una riga da solo   |
+| Cosa          | Come si scrive                            |
+| ------------- | ----------------------------------------- |
+| Foto          | `![descrizione](allegati/foto.jpeg)`      |
+| Didascalia    | `![descrizione](allegati/foto.jpeg "…")`  |
+| Nota vocale   | `![titolo](allegati/nota.m4a)`            |
+| Video mio     | `![](allegati/mare.mp4)`                  |
+| YouTube       | l'indirizzo su una riga da solo           |
 
 ## Le bozze
 

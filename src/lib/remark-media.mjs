@@ -15,7 +15,7 @@
  */
 import { visit } from 'unist-util-visit';
 import { existsSync } from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { indirizzoPubblico } from './media-accanto-ai-post.mjs';
 
 const AUDIO = ['.mp3', '.m4a', '.wav', '.ogg', '.oga', '.aac', '.flac', '.opus'];
@@ -34,6 +34,29 @@ const esterno = (url = '') =>
 const normalizza = (url = '') =>
   esterno(url) || url.startsWith('./') || url.startsWith('../') ? url : `./${url}`;
 
+/** Dove si cerca un allegato: accanto al post, o nella cartella condivisa. */
+const CARTELLE_ALLEGATI = ['', 'allegati'];
+
+/**
+ * Trova un allegato citato per nome e restituisce il percorso su disco.
+ * Prima guarda accanto al post, poi in `allegati/`: così funzionano sia i
+ * post che si tengono le foto vicine, sia quelli che usano la cartella comune.
+ */
+function trova(nome, cartella) {
+  if (!cartella) return null;
+
+  for (const sotto of CARTELLE_ALLEGATI) {
+    const percorso = join(cartella, sotto, nome);
+    if (existsSync(percorso)) return percorso;
+  }
+
+  return null;
+}
+
+/** Percorso relativo al post, da dare ad Astro: "./allegati/foto.jpeg". */
+const relativoAlPost = (percorso, cartella) =>
+  `./${relative(cartella, percorso).split(/[\\/]/).join('/')}`;
+
 /**
  * Indirizzo di una nota vocale o di un video.
  *
@@ -44,12 +67,11 @@ const normalizza = (url = '') =>
 function indirizzo(url, cartella) {
   if (esterno(url)) return url;
 
-  const pulito = url.replace(/^\.\//, '');
-  const suDisco = cartella ? join(cartella, pulito) : null;
+  const suDisco = trova(url.replace(/^\.\//, ''), cartella);
 
-  // se il file non è accanto al post, si lascia il percorso com'era scritto:
-  // magari punta a public/, dove i file vengono serviti così come sono
-  return suDisco && existsSync(suDisco) ? indirizzoPubblico(suDisco) : normalizza(url);
+  // se non si trova, si lascia il percorso com'era scritto: magari punta a
+  // public/, dove i file vengono serviti così come sono
+  return suDisco ? indirizzoPubblico(suDisco) : normalizza(url);
 }
 
 const scappa = (s = '') =>
@@ -125,10 +147,12 @@ function espandiWikilink(figli, cartella) {
       if (prima) risultato.push({ type: 'text', value: prima });
 
       const file = nome.trim();
-      if (cartella && existsSync(resolve(cartella, file))) {
+      const suDisco = trova(file, cartella);
+
+      if (suDisco) {
         risultato.push({
           type: 'image',
-          url: `./${file}`,
+          url: relativoAlPost(suDisco, cartella),
           alt: didascalia?.trim() || '',
           title: null,
         });
@@ -198,8 +222,14 @@ export function remarkMedia() {
     });
 
     // 3. Percorsi relativi: Astro li vuole con "./" davanti per ottimizzarli.
+    //    Se la foto sta nella cartella condivisa, si aggiusta anche il percorso.
     visit(tree, 'image', (immagine) => {
-      immagine.url = normalizza(immagine.url);
+      if (esterno(immagine.url)) return;
+
+      const suDisco = trova(immagine.url.replace(/^\.\//, ''), cartella);
+      immagine.url = suDisco
+        ? relativoAlPost(suDisco, cartella)
+        : normalizza(immagine.url);
     });
 
     // 4. Un'immagine sola in un paragrafo diventa una figura;
