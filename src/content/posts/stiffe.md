@@ -2,7 +2,7 @@
 title: FFVII e le grotte di Stiffe
 pubDate: 2026-08-16
 description: Cronaca e fantasie di un Ferragosto
-cover: ./FFVII-Cave.png
+cover: ./FFVII-Cave.jpg
 tags:
   - Luoghi
   - Cibo
@@ -25,7 +25,7 @@ Final Fantasy VII, come molti giochi di ruolo di ambientazione fantastica, ha qu
 
 Credo che chiunque abbia giocato Final Fantasy VII possa avere la stessa sensazione folgorante, o almeno me lo auguro.
 
-![](FFVII-Cave.png)
+![](FFVII-Cave.jpg)
 
 Final Fantasy VII, oltre a personaggi e storia memorabili, a una colonna sonora degna di sedere al fianco delle più grandi colonne sonore del cinema, ebbe un altro merito molto più personale: mi insegnò un bel pezzo d'inglese. Non venne mai tradotto in italiano, e quando inserii il primo disco (ma forse lo sapevo già leggendo la copertina o il retro), mi trovai davanti alla necessità tra scegliere di non giocare mai un gioco che già all'uscita era stato messo tra i grandi capolavori del genere, e quella di adoperarmi per capirne i dialoghi - che in quel genere sono sostanzialmente la cosa più importante. Non so come, non so in quanto tempo, non so nemmeno esattamente se sia proprio così, ma finii per imparare passo passo a capire quel che si diceva nelle caselle di dialogo in blu, e ricordo ancora di aver usato, sulla mia sediolina davanti alla tv del salotto di casa, un dizionario inglese-italiano di quelli in portatili (*tascabili* direi proprio di no), con una copertina verde fluo. 
 
