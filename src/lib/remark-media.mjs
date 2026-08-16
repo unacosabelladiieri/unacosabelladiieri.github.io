@@ -15,7 +15,8 @@
  */
 import { visit } from 'unist-util-visit';
 import { existsSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
+import { indirizzoPubblico } from './media-accanto-ai-post.mjs';
 
 const AUDIO = ['.mp3', '.m4a', '.wav', '.ogg', '.oga', '.aac', '.flac', '.opus'];
 const VIDEO = ['.mp4', '.webm', '.mov', '.m4v'];
@@ -32,6 +33,24 @@ const esterno = (url = '') =>
 /** "girasoli.jpeg" → "./girasoli.jpeg", perché Astro lo tratti come relativo. */
 const normalizza = (url = '') =>
   esterno(url) || url.startsWith('./') || url.startsWith('../') ? url : `./${url}`;
+
+/**
+ * Indirizzo di una nota vocale o di un video.
+ *
+ * Le immagini le prende in carico Astro, che le ottimizza e le copia da sé;
+ * audio e video no, quindi li serve l'integrazione media-accanto-ai-post, che
+ * li pubblica sotto /media/. Qui si calcola quell'indirizzo.
+ */
+function indirizzo(url, cartella) {
+  if (esterno(url)) return url;
+
+  const pulito = url.replace(/^\.\//, '');
+  const suDisco = cartella ? join(cartella, pulito) : null;
+
+  // se il file non è accanto al post, si lascia il percorso com'era scritto:
+  // magari punta a public/, dove i file vengono serviti così come sono
+  return suDisco && existsSync(suDisco) ? indirizzoPubblico(suDisco) : normalizza(url);
+}
 
 const scappa = (s = '') =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -147,12 +166,14 @@ export function remarkMedia() {
         if (figlio.type !== 'image') return figlio;
 
         const ext = estensione(figlio.url);
-        const url = normalizza(figlio.url);
-        const didascalia = figlio.title || figlio.alt;
+        if (!AUDIO.includes(ext) && !VIDEO.includes(ext)) return figlio;
 
-        if (AUDIO.includes(ext)) return nodoHtml(lettoreAudio(url, didascalia));
-        if (VIDEO.includes(ext)) return nodoHtml(lettoreVideo(url, didascalia));
-        return figlio;
+        const didascalia = figlio.title || figlio.alt;
+        const url = indirizzo(figlio.url, cartella);
+
+        return nodoHtml(
+          AUDIO.includes(ext) ? lettoreAudio(url, didascalia) : lettoreVideo(url, didascalia),
+        );
       });
     });
 

@@ -6,6 +6,8 @@ import rehypeKatex from 'rehype-katex';
 
 // @ts-expect-error — plugin locale in JavaScript, senza tipi
 import { remarkMedia } from './src/lib/remark-media.mjs';
+// @ts-expect-error — integrazione locale in JavaScript, senza tipi
+import { mediaAccantoAiPost } from './src/lib/media-accanto-ai-post.mjs';
 
 import { site } from './src/site.config';
 
@@ -19,6 +21,8 @@ export default defineConfig({
 
   integrations: [
     mdx(),
+    // porta nel sito le note vocali e i video tenuti accanto ai post
+    mediaAccantoAiPost(),
     // le pagine delle etichette sono solo un aiuto alla navigazione:
     // restano fuori dalla sitemap, come dichiarano già con noindex
     sitemap({ filter: (pagina) => !pagina.includes('/tag/') }),
