@@ -1,5 +1,5 @@
 ---
-title: The Bear
+title: The Bear, terza stagione
 pubDate: 2026-08-14
 description: Una gran serie, e Chicago
 cover: ./allegati/bear.jpg
