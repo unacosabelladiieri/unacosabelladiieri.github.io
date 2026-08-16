@@ -6,9 +6,14 @@
  *
  * Le impostazioni stanno in src/site.config.ts (vedi le istruzioni lì).
  */
-import { comments } from '../site.config';
+import { comments, contatto } from '../site.config';
+import { link } from '../lib/utils';
 
 const configurato = comments.enabled && comments.repoId && comments.categoryId;
+
+// La via d'uscita per chi non ha GitHub esiste solo se il modulo di
+// contatto è acceso: altrimenti sarebbe un rimando verso il nulla.
+const conModuloDiContatto = Boolean(contatto.chiave);
 ---
 
 {
@@ -35,6 +40,13 @@ const configurato = comments.enabled && comments.repoId && comments.categoryId;
       <noscript>
         Per leggere e scrivere commenti serve JavaScript attivo.
       </noscript>
+
+      {conModuloDiContatto && (
+        <p class="commenti__senza-github">
+          Per commentare qui serve un account GitHub. Non ce l'hai?{' '}
+          <a href={link('/cos-e-questo-micro-blog#scrivimi')}>Scrivimi</a>.
+        </p>
+      )}
     </section>
   )
 }
@@ -61,5 +73,12 @@ const configurato = comments.enabled && comments.repoId && comments.categoryId;
   .commenti__titolo {
     font-size: 1.1rem;
     margin-top: 0;
+  }
+
+  .commenti__senza-github {
+    margin-top: 1.25rem;
+    font-family: var(--font-ui);
+    font-size: 0.8125rem;
+    color: var(--testo-tenue);
   }
 </style>
