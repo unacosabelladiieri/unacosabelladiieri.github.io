@@ -1,0 +1,71 @@
+# Configurazione di Pages CMS (pagescms.org): serve solo a scrivere i post
+# dal telefono, tramite browser. Il sito non lo usa e non lo legge: si può
+# cancellare questo file in qualsiasi momento e non cambia nulla.
+#
+# Per smettere di usarlo: cancella questo file e revoca l'accesso dell'app
+# su github.com → Settings → Applications → Installed GitHub Apps.
+
+media:
+  # dove finiscono le foto caricate dal telefono
+  input: src/content/posts/allegati
+  # come vengono scritte nel testo del post: percorso relativo, come ovunque
+  output: ./allegati
+
+content:
+  - name: posts
+    label: Post
+    type: collection
+    path: src/content/posts
+    filename: '{fields.title}.md'
+    extension: md
+    # i post più recenti in cima
+    view:
+      fields: [title, pubDate, draft]
+      sort: [pubDate]
+      default:
+        sort: pubDate
+        order: desc
+    fields:
+      - name: title
+        label: Titolo
+        type: string
+        required: true
+
+      - name: pubDate
+        label: Data
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+
+      - name: description
+        label: Presentazione
+        type: text
+        description: Una riga: compare negli elenchi, nel feed e nelle anteprime dei link.
+
+      - name: cover
+        label: Immagine di apertura
+        type: image
+
+      - name: coverAlt
+        label: Descrizione dell'immagine di apertura
+        type: string
+        description: Per chi non può vederla. Vale la pena scriverla.
+
+      - name: tags
+        label: Etichette
+        type: string
+        list: true
+
+      - name: draft
+        label: Bozza
+        type: boolean
+        default: false
+        description: Se acceso, il post resta invisibile online.
+
+      - name: body
+        label: Testo
+        type: text
+        description: >-
+          Markdown, come in Obsidian. Le foto si richiamano con
+          ![descrizione](allegati/foto.jpg)

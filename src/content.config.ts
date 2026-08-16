@@ -17,8 +17,22 @@ const posts = defineCollection({
       updated: z.coerce.date().optional(),
       /** riassunto: appare nell'elenco, nei metadati social e nel feed RSS */
       description: z.string().optional(),
-      /** immagine di apertura, relativa al file del post */
-      cover: image().optional(),
+      /**
+       * Immagine di apertura, indicata come percorso relativo al post.
+       *
+       * Il `preprocess` accetta anche la forma con la barra iniziale
+       * (`/allegati/foto.jpg`): è quella che scrivono certi editor esterni,
+       * e senza questa tolleranza la costruzione del sito fallirebbe.
+       */
+      cover: z
+        .preprocess(
+          (valore) =>
+            typeof valore === 'string' && valore.startsWith('/')
+              ? `.${valore}`
+              : valore,
+          image().optional(),
+        )
+        .optional(),
       coverAlt: z.string().optional(),
       tags: z.array(z.string()).default([]),
       /** true = non compare in elenchi, feed e sitemap */
