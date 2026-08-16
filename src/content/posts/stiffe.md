@@ -25,8 +25,6 @@ Final Fantasy VII, come molti giochi di ruolo di ambientazione fantastica, ha qu
 
 Credo che chiunque abbia giocato Final Fantasy VII possa avere la stessa sensazione folgorante, o almeno me lo auguro.
 
-![](FFVII-Cave.jpg)
-
 Final Fantasy VII, oltre a personaggi e storia memorabili, a una colonna sonora degna di sedere al fianco delle più grandi colonne sonore del cinema, ebbe un altro merito molto più personale: mi insegnò un bel pezzo d'inglese. Non venne mai tradotto in italiano, e quando inserii il primo disco (ma forse lo sapevo già leggendo la copertina o il retro), mi trovai davanti alla necessità tra scegliere di non giocare mai un gioco che già all'uscita era stato messo tra i grandi capolavori del genere, e quella di adoperarmi per capirne i dialoghi - che in quel genere sono sostanzialmente la cosa più importante. Non so come, non so in quanto tempo, non so nemmeno esattamente se sia proprio così, ma finii per imparare passo passo a capire quel che si diceva nelle caselle di dialogo in blu, e ricordo ancora di aver usato, sulla mia sediolina davanti alla tv del salotto di casa, un dizionario inglese-italiano di quelli in portatili (*tascabili* direi proprio di no), con una copertina verde fluo. 
 
 Ma si sa, non di sole fantasie finali vive l'uomo, e non di solo pane. Vive infatti molto meglio di pane e olio, e così - tornati a riveder il sole - fuori dalle grotte di Stiffe siamo andati a pranzo in un posto che mi sento di consigliare a chiunque si trovasse a lottare la Shinra nell'aquilano: [Paneolio](https://www.tripadvisor.it/Restaurant_Review-g1193415-d6484351-Reviews-Paneolio_Cucina_Contemporanea-Poggio_Picenze_Province_of_L_Aquila_Abruzzo.html), che tra le varie cose fa una pizza da provare.
