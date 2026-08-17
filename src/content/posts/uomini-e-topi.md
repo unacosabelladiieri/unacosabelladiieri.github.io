@@ -8,7 +8,6 @@ tags:
 coverAlt: Uomini e topi
 ---
 > *È un bravo ragazzo. Non c'è bisogno di troppo cervello per essere un bravo ragazzo. Qualche volta mi pare anzi che il cervello faccia l'effetto opposto. Prendete uno che sia davvero in gamba, è difficile che sia una brava persona.*
-> 
 > Uomini e topi, John Steinbeck
 
 Tra i buoni propositi che mi ero ingenuamente dato a inizio anno c'era quello di riprendere a leggere a un ritmo decente, meno sporadico e direi quasi eccezionale di quanto fatto negli ultimi anni con la scusa del tanto lavoro, dei tanti impegni, e baggianate del genere.
