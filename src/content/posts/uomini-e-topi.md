@@ -15,7 +15,7 @@ Perché leggere è uno dei pochi modi certi per *vivere di più*, e uno dei più
 
 Non sto rispettando al meglio delle mie possibilità l'impegno di leggere con costanza (ma almeno ho ricominciato a scrivere, facciamo che va bene così). Devo però riconoscere di essere stato fortunato con la scelta dei libri a cui affidare l'enorme responsabilità di allontanarmi dalle perdite di tempo. Tra questi, ho letto qualche mese fa *Furore* di John Steinbeck, autore che mi aveva sempre incuriosito e che avevo sempre rimandato. *Furore* è un capolavoro indimenticabile e mi ha subito messo voglia di leggere altro dello stesso autore. Ho temporeggiato un po' troppo a lungo, prima di prendere tra le mani questo celebre *Uomini e topi*, breve romanzo che si finisce in un pomeriggio (se si ha abbastanza pazienza e dedizione) o comunque in due tre giorni di letture disimpegnate.
 
-![John Steinbeck](steinbeck.jpg)
+![](steinbeck%201.jpg)
 
 Il filo conduttore del racconto non è lontano da quello di *Furore*: si parla sempre di disperati che si ritrovano in California in cerca di lavoro, ma qui è ben diverso il contesto che si sviluppa tra i due protagonisti e gli estranei con cui si trovano a condividere la vicenda narrata. Quel che *Uomini e topi* condivide con *Furore* è un certo tono mitico che fa da sottofondo a una storia molto terrena e con risvolti violenti. E vale la pena sottolineare anche la vicinanza temporale tra i due testi, separati da soli due anni (*Uomini e topi* esce nel 1937, *Furore* nel 1939).
 
