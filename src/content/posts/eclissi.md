@@ -17,7 +17,7 @@ C'è un posto paradossale sulla Costa Adriatica, qualche km a nord di Vasto. Aff
 
 È Punta Aderci, promontorio selvaggio che prova a difendersi da porti e fabbriche, cemento e ferro, uomo e natura. Non è di certo l'unico posto che offra l'illusione di alba e tramonto, ma è caro a molti.
 
-Qualche metro prima del promontorio, a Punta Aderci, sono tornati dopo un po' di anni i girasoli. Hanno scelto l'anno sbagliato, infuocati da un agosto infernale. Contrariati da tutto questo sole, se ne sono stati indifferenti a guardare dall'altra parte, incuranti di tutta questa gente che cercava di bruciarsi le retine per sottrarle allo stillicidio quotidiano di meraviglia e oscenità.
+Qualche metro prima del promontorio, a Punta Aderci, sono tornati dopo un po' di anni i girasoli. Hanno scelto l'anno sbagliato, infuocati da un agosto infernale. Contrariati da un sole troppo insistente, se ne sono stati indifferenti a guardare dall'altra parte, incuranti di tutta questa gente che cercava di bruciarsi le retine per sottrarle allo stillicidio quotidiano di meraviglia e oscenità.
 
 ![Gli indifferenti, girasoli voltano le spalle all'eclissi](allegati/girasoli.jpeg)
 
