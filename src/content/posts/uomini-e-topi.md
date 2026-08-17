@@ -2,7 +2,7 @@
 title: Uomini e topi, John Steinbeck
 pubDate: 2026-08-17
 description: Un romanzo breve per un pomeriggio d'estate
-cover: ./allegati/uominietopi.jpg
+cover: ./allegati/uominietopi.jpeg
 tags:
   - Libri
 coverAlt: Uomini e topi

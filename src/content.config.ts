@@ -1,5 +1,42 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+
+const CARTELLA_POST = 'src/content/posts';
+const ESTENSIONI_IMMAGINE = ['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'];
+
+/**
+ * Sistema il percorso della copertina prima che Astro provi ad aprirla.
+ *
+ * Fa due cortesie, perché sbagliare qui ferma la costruzione dell'intero
+ * sito e il messaggio d'errore arriva solo dopo il push:
+ *
+ *  - accetta la barra iniziale (`/allegati/foto.jpg`), che scrivono certi
+ *    editor esterni;
+ *  - se il file non c'è ma esiste con un'altra estensione — il classico
+ *    `.jpg` scritto al posto di `.jpeg` — usa quella giusta.
+ *
+ * Se non trova proprio nulla lascia il valore com'era, così l'errore di
+ * Astro resta chiaro e indica il nome che avevi scritto.
+ */
+function risolviCopertina(valore: unknown): unknown {
+  if (typeof valore !== 'string' || valore.startsWith('http')) return valore;
+
+  const relativo = valore.startsWith('/') ? `.${valore}` : valore;
+  const suDisco = (percorso: string) =>
+    join(CARTELLA_POST, percorso.replace(/^\.\//, ''));
+
+  if (existsSync(suDisco(relativo))) return relativo;
+
+  const senzaEstensione = relativo.replace(/\.[^./]+$/, '');
+  for (const estensione of ESTENSIONI_IMMAGINE) {
+    const tentativo = `${senzaEstensione}${estensione}`;
+    if (existsSync(suDisco(tentativo))) return tentativo;
+  }
+
+  return relativo;
+}
 
 /**
  * Il blog principale: un file .md o .mdx per post in src/content/posts/.
@@ -24,15 +61,7 @@ const posts = defineCollection({
        * (`/allegati/foto.jpg`): è quella che scrivono certi editor esterni,
        * e senza questa tolleranza la costruzione del sito fallirebbe.
        */
-      cover: z
-        .preprocess(
-          (valore) =>
-            typeof valore === 'string' && valore.startsWith('/')
-              ? `.${valore}`
-              : valore,
-          image().optional(),
-        )
-        .optional(),
+      cover: z.preprocess(risolviCopertina, image().optional()).optional(),
       coverAlt: z.string().optional(),
       tags: z.array(z.string()).default([]),
       /** true = non viene proprio pubblicato: si vede solo in locale */
