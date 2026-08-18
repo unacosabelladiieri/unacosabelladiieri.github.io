@@ -1,10 +1,11 @@
 ---
 title: Onde che si ritirano sui sassi
 pubDate: 2026-08-17
-description: Musica della natura e un film adorato
+description: Musica della natura e Massimo Troisi
 cover: ./allegati/suoni-isola.jpeg
 tags:
-  - Libri
+  - Film
+  - Natura
 coverAlt: I suoni dell'isola, scena da Il Postino
 ---
 Alle spiagge di sabbia fine e dorata riesco a invidiare solo la comodità. Ho nel DNA la scomodità delle spiagge di ciottoli, e quando la marea si alza e il mare si agita finisco per chiedermi cosa ne sappia, chi vive spiagge sabbiose, della musica che il mare fa quando richiama le sue onde tra i sassi. Un suono così suggestivo che tempo fa, sulla distesa di ciottoli di Mottagrossa, avevo pensato di registrare.
