@@ -16,34 +16,34 @@ Quest'idea di cercare di catturare i suoni del mare non è esattamente nuova, e 
 
 Finisco allora con i versi che Roberto Benigni dedicò a Massimo Troisi dopo la sua morte prematura, che raccontano tutto questo molto meglio di quanto io abbia saputo fare qui sopra.
 
-Non so cosa teneva dint'a capa;
-intelligente, generoso, scaltro,
-per lui non vale il detto che è del Papa,
-morto un Troisi non se ne fa un altro.
+*Non so cosa teneva dint'a capa;  
+*intelligente, generoso, scaltro,*  
+*per lui non vale il detto che è del Papa,*  
+*morto un Troisi non se ne fa un altro.*  
 
-Morto Troisi muore la segreta
-arte di quella dolce tarantella,
-ciò che Moravia disse del Poeta
-io lo ridico per un Pulcinella.
+*Morto Troisi muore la segreta*  
+*arte di quella dolce tarantella,*  
+*ciò che Moravia disse del Poeta*  
+*io lo ridico per un Pulcinella.*  
 
-La gioia di bagnarsi in quel diluvio
-di jamm, o' saccio, ‘naggia, oilloc, azz!;
-era come parlare col Vesuvio, 
-era come ascoltare del buon Jazz.
+*La gioia di bagnarsi in quel diluvio*  
+*di jamm, o' saccio, ‘naggia, oilloc, azz!;*  
+*era come parlare col Vesuvio,*   
+*era come ascoltare del buon Jazz.*  
 
-"Non si capisce", urlavano sicuri,
-"questo Troisi se ne resti al Sud!"
-Adesso lo capiscono i canguri,
-gli Indiani e i miliardari di Holliwood!
+*"Non si capisce", urlavano sicuri,*  
+*"questo Troisi se ne resti al Sud!"*  
+*Adesso lo capiscono i canguri,*  
+*gli Indiani e i miliardari di Holliwood!    
 
-Con lui ho capito tutta la bellezza
-di Napoli, la gente, il suo destino,
-e non m'ha mai parlato della pizza,
-e non m'ha mai suonato il mandolino.
+*Con lui ho capito tutta la bellezza*  
+*di Napoli, la gente, il suo destino,*  
+*e non m'ha mai parlato della pizza,*  
+*e non m'ha mai suonato il mandolino.*  
 
-O Massimino io ti tengo in serbo
-fra ciò che il mondo dona di più caro,
-ha fatto più miracoli il tuo verbo
-di quello dell'amato San Gennaro.
+*O Massimino io ti tengo in serbo*  
+*fra ciò che il mondo dona di più caro,*  
+*ha fatto più miracoli il tuo verbo*  
+*di quello dell'amato San Gennaro.*  
 
 https://www.youtube.com/watch?v=8ad4WsDOCJg
