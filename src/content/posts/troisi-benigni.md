@@ -8,11 +8,11 @@ tags:
   - Natura
 coverAlt: I suoni dell'isola, scena da Il Postino
 ---
-Alle spiagge di sabbia fine e dorata riesco a invidiare solo la comodità. Ho nel DNA la scomodità delle spiagge di ciottoli, e quando la marea si alza e il mare si agita finisco per chiedermi cosa ne sappia, chi vive spiagge sabbiose, della musica che il mare fa quando richiama le sue onde tra i sassi. Un suono così suggestivo che tempo fa, sulla distesa di ciottoli di Mottagrossa, avevo pensato di registrare.
+Alle spiagge di sabbia fine e dorata riesco a invidiare solo la comodità. Ho nel DNA la scomodità delle spiagge di ciottoli, e quando la marea si alza e il mare si agita finisco per chiedermi cosa ne sappia, chi vive spiagge sabbiose, della musica che il mare fa quando richiama le sue onde tra i sassi. Un suono così suggestivo che sulla distesa di ciottoli di Mottagrossa mi è balenato in mente di registrare.
 
 ![Il suono del mare che si ritira sui sassi a Mottagrossa](audio.m4a)
 
-Quest'idea di cercare di catturare i suoni del mare non è esattamente nuova, e io arrivo buon ultimo nella scia di cose ben più belle su questo tema. Il punto più alto che mi venga in mente è la scena di un film adorato, *Il postino*, in cui Mario Ruoppolo (Massimo Troisi) prova a registrare i suoni della sua isola per inviarli al poeta Pablo Neruda (Philippe Noiret), che lì era stato qualche tempo prima. Lo so, lo so, mi faccio prendere un po' dal sentimentale, ma la scena è magnifica e delicata come tutto il film, e pensare che Troisi abbia dedicato a queste immagini e questi suoni le ultime forze del suo cuore stremato fa tutto il resto. Tutti i film di Troisi hanno qualcosa di magico, ma questo - complice la musica malinconica e liricissima di Bacalov - trascende anche la magia.
+L'idea di cercare di catturare i suoni del mare non è esattamente nuova, e io arrivo buon ultimo nella scia di cose ben più belle su questo tema. Il punto più alto che mi venga in mente è la scena di un film adorato, *Il postino*, in cui Mario Ruoppolo (Massimo Troisi) prova a registrare i suoni della sua isola per inviarli al poeta Pablo Neruda (Philippe Noiret), che lì era stato qualche tempo prima. Lo so, lo so, mi faccio prendere un po' dal sentimentale, ma la scena è magnifica e delicata come tutto il film, e pensare che Troisi abbia dedicato a queste immagini e questi suoni le ultime forze del suo cuore stremato fa tutto il resto. Tutti i film di Troisi hanno qualcosa di magico, ma questo - complice la musica malinconica e liricissima di Bacalov - trascende anche la magia.
 
 Finisco allora con i versi che Roberto Benigni dedicò a Massimo Troisi dopo la sua morte prematura, che raccontano tutto questo molto meglio di quanto io abbia saputo fare qui sopra.
 
