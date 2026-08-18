@@ -1,7 +1,7 @@
 ---
 title: Onde che si ritirano sui sassi
-pubDate: 2026-08-17
-description: Musica della natura e Massimo Troisi
+pubDate: 2026-08-18
+description: Musica della natura e un film adorato (Il postino)
 cover: ./allegati/suoni-isola.jpeg
 tags:
   - Film
