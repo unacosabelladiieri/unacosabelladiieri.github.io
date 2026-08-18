@@ -16,7 +16,7 @@ Quest'idea di cercare di catturare i suoni del mare non è esattamente nuova, e 
 
 Finisco allora con i versi che Roberto Benigni dedicò a Massimo Troisi dopo la sua morte prematura, che raccontano tutto questo molto meglio di quanto io abbia saputo fare qui sopra.
 
-*Non so cosa teneva dint'a capa;  
+*Non so cosa teneva dint'a capa;*    
 *intelligente, generoso, scaltro,*  
 *per lui non vale il detto che è del Papa,*  
 *morto un Troisi non se ne fa un altro.*  
@@ -34,7 +34,7 @@ Finisco allora con i versi che Roberto Benigni dedicò a Massimo Troisi dopo la 
 *"Non si capisce", urlavano sicuri,*  
 *"questo Troisi se ne resti al Sud!"*  
 *Adesso lo capiscono i canguri,*  
-*gli Indiani e i miliardari di Holliwood!    
+*gli Indiani e i miliardari di Holliwood!*    
 
 *Con lui ho capito tutta la bellezza*  
 *di Napoli, la gente, il suo destino,*  
