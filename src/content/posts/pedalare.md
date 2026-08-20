@@ -23,4 +23,4 @@ Per finire in uno dei luoghi più suggestivi, scendendo verso sud, poco oltre il
 
 Si finisce a volte per associare a luoghi ricordi precisi, ma giornate come questa in posti vissuti e rivissuti nuovamente, con persone diverse e occhi diversi, insegnano soprattutto che esiste un posto nell'anima per luoghi amatissimi e vedute folgoranti che è simultaneamente di tutti e solo nostro, e che i ricordi che ad essi associamo sono di volta in volta un pezzo di memoria in più, senza particolari privilegi. Da ieri ho un bellissimo pezzo di memoria in più che attraversa questo tratto di costa adorato, e provo per questo un profondo senso di gratitudine. La vita sa essere bellissima.
 
-![](abbazia.jpeg)![](abbaziasud.jpeg)![](abbazianord%201.jpeg)
+![](abbazia.jpeg)![](abbaziasud.jpeg)![](abbazianord.jpeg)
