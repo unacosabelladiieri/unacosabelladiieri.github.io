@@ -2,7 +2,7 @@
 title: Pedalare sulla via Verde
 pubDate: 2026-08-20
 description:
-cover: ./allegati/viaverde.jpg
+cover: ./allegati/viaverde.jpeg
 tags:
   - Mare
   - Luoghi
