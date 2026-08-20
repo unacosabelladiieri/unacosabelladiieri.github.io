@@ -29,6 +29,15 @@ function risolviCopertina(valore: unknown): unknown {
 
   if (existsSync(suDisco(relativo))) return relativo;
 
+  // negli indirizzi gli spazi diventano %20: "foto%201.jpeg" è "foto 1.jpeg"
+  try {
+    const decodificato = decodeURIComponent(relativo);
+    if (decodificato !== relativo && existsSync(suDisco(decodificato)))
+      return decodificato;
+  } catch {
+    // codifica malformata: si prosegue con gli altri tentativi
+  }
+
   const senzaEstensione = relativo.replace(/\.[^./]+$/, '');
   for (const estensione of ESTENSIONI_IMMAGINE) {
     const tentativo = `${senzaEstensione}${estensione}`;

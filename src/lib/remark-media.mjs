@@ -39,15 +39,29 @@ const CARTELLE_ALLEGATI = ['', 'allegati'];
 
 /**
  * Trova un allegato citato per nome e restituisce il percorso su disco.
+ *
  * Prima guarda accanto al post, poi in `allegati/`: così funzionano sia i
  * post che si tengono le foto vicine, sia quelli che usano la cartella comune.
+ *
+ * Prova sia il nome così com'è scritto sia quello decodificato, perché negli
+ * indirizzi Markdown gli spazi diventano `%20`: un file chiamato davvero
+ * "foto 1.jpeg" arriva qui come "foto%201.jpeg".
  */
 function trova(nome, cartella) {
   if (!cartella) return null;
 
+  const candidati = new Set([nome]);
+  try {
+    candidati.add(decodeURIComponent(nome));
+  } catch {
+    // indirizzo con una codifica malformata: si tiene solo il nome originale
+  }
+
   for (const sotto of CARTELLE_ALLEGATI) {
-    const percorso = join(cartella, sotto, nome);
-    if (existsSync(percorso)) return percorso;
+    for (const candidato of candidati) {
+      const percorso = join(cartella, sotto, candidato);
+      if (existsSync(percorso)) return percorso;
+    }
   }
 
   return null;
