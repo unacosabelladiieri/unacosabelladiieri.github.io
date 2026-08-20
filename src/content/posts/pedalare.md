@@ -1,7 +1,7 @@
 ---
 title: Pedalare sulla via Verde
 pubDate: 2026-08-20
-description:
+description: Della fortuna di fare da guida a occhi curiosi in posti meravigliosi
 cover: ./allegati/viaverde.jpeg
 tags:
   - Mare
