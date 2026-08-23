@@ -4,6 +4,7 @@ pubDate: 2026-08-22
 description: O forse Celine Dion
 cover: ./allegati/rach.jpeg
 tags:
+  - Musica
 coverAlt: Sergej Rachmaninov
 ---
 Ho incrociato ieri uno sconosciuto in bicicletta che sussurrava il tema dell’Adagio del secondo concerto di Rachmaninov:
