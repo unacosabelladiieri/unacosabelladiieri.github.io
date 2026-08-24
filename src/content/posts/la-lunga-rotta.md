@@ -19,7 +19,7 @@ Senza tirarla troppo per le lunghe, Moitessier scappò dalla competizione per il
 
 > Naturalmente, continuerò per il Pacifico. Non so più chi diceva: "ci sono due cose terribili per un uomo: non avere realizzato il proprio sogno o averlo realizzato"
 
-*La lunga rotta* è un gran libro, metà cronaca di un'avventura, metà cronaca di un'introspezione. Colmo di passaggi fulminanti sul mare, la libertà, la solitudine, il senso delle cose. Vale la pena rileggerlo ogni tanto per ricordarsi che c'è un mare là fuori, e anche un certo numero d'oceani. Senza prendersi troppo sul serio, però:
+*La lunga rotta* è un gran libro, metà cronaca di un'avventura, metà cronaca di un'introspezione. Colmo di passaggi fulminanti sulla libertà, sulla solitudine, sul senso delle cose. Vale la pena rileggerlo ogni tanto per ricordarsi che c'è un mare là fuori, e anche un certo numero d'oceani. Senza prendersi troppo sul serio, però:
 
 https://www.youtube.com/watch?v=cB8Be2ECZ60
 
