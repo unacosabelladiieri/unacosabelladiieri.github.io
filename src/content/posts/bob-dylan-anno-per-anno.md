@@ -1,6 +1,6 @@
 ---
 title: Un Dylan per album
-pubDate: 2026-08-22
+pubDate: 2026-08-25
 description: C'è (quasi) sempre un gran commento su YouTube
 cover: ./allegati/dylan.jpeg
 tags:
