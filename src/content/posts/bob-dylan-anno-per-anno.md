@@ -55,5 +55,5 @@ In questo caso, si tratta di un commento molto semplice: un elenco di un verso s
 *2015: I'm a fool to want you*  
 *2016: But I'm with you always, I'm with you rain or shine*  
 *2017:  I guess I'll have to change my plans*  
-*2020: I´m a man of contradictions, I´m a man of many moods, I contain multitudes*  
-*2020: Mother of Muses, wherever you are, I´ve already outlived my life by far*  
+*2020: I'm a man of contradictions, I'm a man of many moods, I contain multitudes*  
+*2020: Mother of Muses, wherever you are, I've already outlived my life by far*  
