@@ -1,7 +1,7 @@
 ---
 title: Un vino indecifrabile
 pubDate: 2026-08-28
-description: E un 15 agosto a Montalcino, qualche anno fa
+description: E cipressi sfidati dal vento
 cover: ./allegati/pianrosso.jpeg
 tags:
   - Vino
@@ -10,7 +10,7 @@ coverAlt: Brunello di Montalcino Ciacci Piccolomini "Pianrosso"
 ---
 Tra i grandi vini rossi italiani, il Brunello di Montalcino è per me il più indecifrabile. Vocato a non invecchiare mai come (se non oltre) i più grandi piemontesi, l'ho sempre trovato molto più criptico e indecifrabile di altri grandi vini nati dalle stesse uve. Per questo, ogni volta che si è trattato di scegliere una bottiglia buona per qualche occasione, la scelta è sempre ricaduta sulla sensualità di un gran Barbaresco, o un prorompente Barolo, anche per una mia certa preferenza per la loro, di uva. Restando all'uva sangiovese, mi è stato invece spesso più facile scegliere qualche Chianti Classico Riserva, di frequente campione di qualità a prezzi ancora umani, campionato dal quale è purtroppo quasi sempre necessario escludere le espressioni più "base" dei pinot nero di Borgogna, altra mia grande passione (ho gusti banali, lo so).
 
-Che c'entra dunque in tutto questo il Brunello? C'entra perché ieri sera ho avuto l'occasione di bere nuovamente uno dei più grandi vini che io abbia mai bevuto: il Brunello Ciacci Piccolomini "Pianrosso". L'avevo bevuto in un caldissimo (e davvero bello) 15 agosto, qualche anno fa, proprio a Montalcino, in una giornata in cui un vento caldo fiaccava le resistenze dei pini della val d'Orcia. 
+Che c'entra dunque in tutto questo il Brunello? C'entra perché ieri sera ho avuto l'occasione di bere nuovamente uno dei più grandi vini che io abbia mai bevuto: il Brunello Ciacci Piccolomini "Pianrosso". L'avevo bevuto in agosto, un agosto caldo quasi quanto questo, qualche anno fa, proprio a Montalcino, in una giornata in cui un vento caldo fiaccava le resistenze dei pini della val d'Orcia. 
 
 ![](cipressi.jpeg)
 
