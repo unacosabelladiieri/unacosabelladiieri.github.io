@@ -7,7 +7,7 @@ tags:
   - Musica
 coverAlt: Bob Dylan
 ---
-C'è un disco che ascolto e riascolto da un po' di tempo ormai: *Blood on the Tracks* di Bob Dylan, che l'anno scorso ha compiuto 50 anni. Non lo conoscevo prima dell'uscita del cofanetto *More Blood More Tracks*, che ne raccoglie le travagliate sessioni di registrazione, che viderò cambiare faccia al disco da uno studio all'altro di registrazione, passando da una versione quasi solistica e molto essenziale a una versione (definitiva) ben più arrangiata e ricca di accompagnamenti. Considerate per esempio *Simple Twist of Fate*, qui nella primissima incisione (si può suonare già così bene al primo tentativo?):
+C'è un disco che ascolto e riascolto da un po' di tempo ormai: *Blood on the Tracks* di Bob Dylan, che l'anno scorso ha compiuto 50 anni. Non lo conoscevo prima dell'uscita del cofanetto *More Blood More Tracks*, che ne raccoglie le travagliate sessioni di registrazione, che videro cambiare faccia al disco da uno studio all'altro, passando da una versione quasi solistica e molto essenziale a una versione (definitiva) ben più arrangiata e ricca di accompagnamenti. Considerate per esempio *Simple Twist of Fate*, qui nella primissima incisione (si può suonare già così bene al primo tentativo?):
 
 https://www.youtube.com/watch?v=oXlkwHECabU
 

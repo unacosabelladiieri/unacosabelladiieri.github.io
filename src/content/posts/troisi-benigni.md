@@ -8,7 +8,7 @@ tags:
   - Natura
 coverAlt: I suoni dell'isola, scena da Il Postino
 ---
-Alle spiagge di sabbia fine e dorata riesco a invidiare solo la comodità. Ho nel DNA la scomodità delle spiagge di ciottoli, e quando la marea si alza e il mare si agita finisco per chiedermi cosa ne sappia, chi vive spiagge sabbiose, della musica che il mare fa quando richiama le sue onde tra i sassi. Un suono così suggestivo che sulla distesa di ciottoli di Mottagrossa mi è balenato in mente di registrare.
+Alle spiagge di sabbia fine e dorata riesco a invidiare solo la comodità. Ho nel DNA la scomodità delle spiagge di ciottoli, e quando la marea si alza e il mare si agita finisco per chiedermi cosa ne sappia chi vive spiagge sabbiose della musica che il mare fa quando richiama le sue onde tra i sassi. Un suono così suggestivo che sulla distesa di ciottoli di Mottagrossa mi è balenato in mente di registrarlo.
 
 ![Il suono del mare che si ritira sui sassi a Mottagrossa](audio.m4a)
 
@@ -34,7 +34,7 @@ Finisco allora con i versi che Roberto Benigni dedicò a Massimo Troisi dopo la 
 *"Non si capisce", urlavano sicuri,*  
 *"questo Troisi se ne resti al Sud!"*  
 *Adesso lo capiscono i canguri,*  
-*gli Indiani e i miliardari di Holliwood!*    
+*gli Indiani e i miliardari di Hollywood!*    
 
 *Con lui ho capito tutta la bellezza*  
 *di Napoli, la gente, il suo destino,*  

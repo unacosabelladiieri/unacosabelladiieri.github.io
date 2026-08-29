@@ -13,7 +13,7 @@ coverAlt: Eclissi di sole, 12 agosto 2026
 > 
 > *Il sorpasso, Dino Risi*
 
-C'è un posto paradossale sulla Costa Adriatica, qualche km a nord di Vasto. Affaccia dove il sole sorge, ma concede anche il lusso di guardarlo scendere sul mare, soprattutto in estate, poco prima di nascondersi dietro il Gran Sasso.
+C'è un posto paradossale sulla Costa Adriatica, qualche km a nord di Vasto. Si affaccia dove il sole sorge, ma concede anche il lusso di guardarlo scendere sul mare, soprattutto in estate, poco prima di nascondersi dietro il Gran Sasso.
 
 È Punta Aderci, promontorio selvaggio che prova a difendersi da porti e fabbriche, cemento e ferro, uomo e natura. Non è di certo l'unico posto che offra l'illusione di alba e tramonto, ma è caro a molti.
 

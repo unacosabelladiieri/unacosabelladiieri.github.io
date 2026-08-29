@@ -11,11 +11,11 @@ coverAlt: Bernard Moitessier
 > 
 > La lunga rotta, Bernard Moitessier
 
-Non so se il vecchio pescatore dell'Indocina conoscesse il fenomeno fisico dello *scattering* e quindi abbia raccontato al piccolo Bernard Moitessier la verità sul perché le stelle scintillano (o "vacillano", come [scrive](https://www.poeticous.com/cesare-pavese/lo-steddazzu?locale=it) Pavese), ma poco importa, a volte è bello lasciarsi affascinare da spiegazioni più misteriose.
+Non so se il vecchio pescatore dell'Indocina conoscesse il fenomeno della rifrazione e quindi abbia raccontato al piccolo Bernard Moitessier la verità sul perché le stelle scintillano (o "vacillano", come [scrive](https://www.poeticous.com/cesare-pavese/lo-steddazzu?locale=it) Pavese), ma poco importa, a volte è bello lasciarsi affascinare da spiegazioni più misteriose.
 
 Nel molto parlare dell'Odissea di Nolan che si è fatto nelle ultime settimane, e - **spoiler** - nel ragionare sull'idea del vagabondare senza fine per il mare come forma di pena da espiare, mi è venuta voglia di rileggere il racconto fatto da Moitessier della sua personale e solitaria odissea: *La lunga rotta*, dal cui sottotitolo è tratto il titolo di questo post. 
 
-Senza tirarla troppo per le lunghe, Moitessier scappò dalla competizione per il primo giro del mondo in solitaria (1968) quando aveva praticamente già vinto, decidendo di fare un'altra metà di giro del mondo e fermandosi infine a Tahiti, quasi un anno dopo la partenza. Pazienza per il premio perso, per la moglie disperata, pazienza per il mondo in attesa di spiegazioni.
+Senza tirarla troppo per le lunghe, Moitessier scappò dalla competizione per il primo giro del mondo in solitaria senza scalo (1968) quando aveva praticamente già vinto, decidendo di fare un'altra metà di giro del mondo e fermandosi infine a Tahiti, quasi un anno dopo la partenza. Pazienza per il premio perso, per la moglie disperata, pazienza per il mondo in attesa di spiegazioni.
 
 > Naturalmente, continuerò per il Pacifico. Non so più chi diceva: "ci sono due cose terribili per un uomo: non avere realizzato il proprio sogno o averlo realizzato"
 
