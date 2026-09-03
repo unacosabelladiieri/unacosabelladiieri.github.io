@@ -1,6 +1,6 @@
 ---
 title: I muscoli del capitano
-pubDate: 2026-08-03
+pubDate: 2026-09-03
 description: Tra Moitessier e De Gregori
 cover: ./allegati/iceberg.jpeg
 tags:
