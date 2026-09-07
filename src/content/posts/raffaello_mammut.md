@@ -12,11 +12,11 @@ Da anni c'era una promessa non concretizzata che avevo fatto e dovevo prima o po
 
 ![](IMG_2739.jpeg)
 
-Non è l'unica bellezza ospitata nel Forte spagnolo, che peraltro custodisce in parziale rovina una magnifica sala da concerto, dotata di un'acustica davvero strepitosa (l'Auditorium "Nino Carloni", in perenne restauro dal terremoto del 2009). C'è infatti al Castello anche il MuNDA - Museo Nazionale d'Abruzzo, che occupa due piani di un'ala e raccoglie molti pregevoli opere di artisti abruzzesi prevalentemente medievali. Tra le opere non abruzzesi è finalmente tornata a casa la *Visitazione* di Raffaello, per l'occasione in prestito dal Prado di Madrid, affiancata in queste settimane a una altrettanto ammirevole *Visitazione* del Pontormo.  
+Non è l'unica bellezza ospitata nel Forte spagnolo, che peraltro custodisce in parziale rovina una piccola sala da concerto, dotata di un'acustica davvero strepitosa (l'Auditorium "Nino Carloni", in perenne restauro dal terremoto del 2009). C'è infatti al Castello anche il MuNDA - Museo Nazionale d'Abruzzo, che occupa due piani di un'ala e raccoglie molti pregevoli opere di artisti abruzzesi prevalentemente medievali. Tra le opere non abruzzesi è finalmente tornata a casa la *Visitazione* di Raffaello, per l'occasione in prestito dal Prado di Madrid, affiancata in queste settimane a una altrettanto ammirevole *Visitazione* del Pontormo.  
 
 ![](IMG_2734.jpeg)
   
-Questo magnifico Raffaello è tornato a casa, dicevo, perché all'Aquila fu originariamente destinato e collocato nella Chiesa di San Silvestro, prima di essere "requisito" dal Vicere di Napoli e finire in Spagna. Non è l'unica bellezza attualmente in mostra al MuNDA, che tra le opere non abruzzesi ospiterà stabilmente da qui in avanti un *Ecce Homo* di Antonello da Messina, ad arricchire la già pregevole collezione stabile.
+Questo Raffaello è tornato a casa, dicevo, perché all'Aquila fu originariamente destinato e collocato nella Chiesa di San Silvestro, prima di essere "requisito" dal Vicere di Napoli e finire in Spagna. Non è l'unica bellezza attualmente in mostra al MuNDA, che tra le opere non abruzzesi ospiterà stabilmente da qui in avanti un *Ecce Homo* di Antonello da Messina, ad arricchire la già pregevole collezione stabile.
 
 ![](IMG_2737.jpeg)
 
