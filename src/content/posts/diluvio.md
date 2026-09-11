@@ -18,3 +18,20 @@ https://www.youtube.com/watch?v=7TvU5KUxhuQ
 
 > Dopo di noi il bello verrà  
 > Finché terrà l'ombrello
+
+Il mio Battisti "bianco" preferito è quello dell'ultimo disco, *Hegel*, che mi sembra più bello a ogni ascolto. Non facile, ovviamente, bisogna un po' farci l'orecchio. Ma poi ci si ritrova a chiedersi come sia possibile che il pubblico abbia potuto dimenticare questa musica. Tra tutte, "Estetica" è la mia preferita:
+
+https://www.youtube.com/watch?v=k7Zo-MLOwt8  
+
+> E ci contrastavamo amabilmente  
+> Su aria, fiato e facoltà vitale,   
+> Su brio d'intelligenza,   
+> Sull'indole e sull'estro,   
+> Soffio, refolo, vento e venticello,   
+> Sull'essenza e sulla soluzione,   
+> Sul volatile e sulla proporzione,   
+> Sul naturale e sul denaturato.   
+> E poi sulla fortuna.   
+> La fortuna non c'entra   
+> Quando una cosa   
+> Per terra si posa.  
