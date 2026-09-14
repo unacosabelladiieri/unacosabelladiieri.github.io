@@ -21,6 +21,7 @@ Non si può certo pretendere che posti così scenografici non facciano colpo, ma
 ![](calasciodrone.jpeg)
 
 Riscesi dalla Rocca, è stato quasi inevitabile rifocillarsi da [*Nonno Alberico*](https://maps.app.goo.gl/k8k3eC7ibZc9mNoX9) bevendo il frutto dell'uva più seducente del mondo in giusta compagnia. Nonno Alberico è una vecchia bottega di paese, un vecchio negozio di generi alimentari, trasformato da una felice intuizione in un punto di ristoro per ogni orario, ogni gusto, ogni tasca: dai prodotti della pura tradizione alimentare abruzzese e laziale, fino ai grandi vini francesi. Quando hai il piacere di pranzare con chi ha nel cuore il pinot nero, e si lascia corteggiare dal profumo di una buona amatriciana, Nonno Alberico è il posto perfetto. 
+  
 ![](albe.jpeg)
 ![](bourg.jpeg)
 
