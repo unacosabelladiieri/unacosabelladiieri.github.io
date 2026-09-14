@@ -14,7 +14,7 @@ In fin dei conti, se mi chiedessero quali sono i miei posti del cuore - o forse 
 
 ![](chiesacalascio.jpeg)
 
-Colpevolmente, mancavo da questo posto carissimo da addirittura quattro anni (pensavo meno), forse perché si tratta ormai di luoghi così familiari da non richiedere neppure frequentazioni assidue per sentirli parte di sé. Quando però sabato è spuntato fuori il nome di Rocca Calascio tra le idee sul dove passare la domenica, ho pensato che sarebbe stato bello tornarci, finalmente. È lo è stato, trovando intatta la stessa meraviglia di sempre, e per fortuna poca calca. 
+Colpevolmente, mancavo da questo posto carissimo da addirittura quattro anni (pensavo meno), forse perché si tratta ormai di luoghi così familiari da non richiedere neppure frequentazioni assidue per sentirli parte di sé. Quando però sabato è spuntato fuori il nome di Rocca Calascio tra le idee sul dove passare la domenica, ho pensato che sarebbe stato bello tornarci, finalmente. E lo è stato, trovando intatta la stessa meraviglia di sempre, e per fortuna poca calca. 
 
 Non si può certo pretendere che posti così scenografici non facciano colpo, ma c'è un innegabile dispiacere nel vedere un luogo così adatto al silenzio e alla riflessione invaso dal turismo da abbuffata di scatti mozzafiato, se non maltrattato per altri fini. È per questo che il momento migliore per visitare Rocca Calascio è forse l'inverno, quando i colori virano verso il bianco (buona scusa per mettere qui sotto uno degli scatti che il mio vecchio caro *Nino* - così chiamavamo il mio piccolo dro*nino* - fece prima di schiantarsi su un tetto di un'altra montagna).
 
