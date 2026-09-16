@@ -10,7 +10,7 @@ coverAlt: Liam e Noel Gallagher
 ---
 Gli Oasis sono stati parte della colonna sonora della mia "infanzia". Uso le virgolette perché dev'essere stato attorno agli anni '97-'98 che i fratelli Gallagher si impossessarono dello stereo di mia sorella per rimanerci per un bel po' di tempo. Probabilmente la prendevo in giro, ai tempi, ma aveva ragione lei: quei primi tre o quattro album degli Oasis erano erano oggettivamente pieni di pezzi memorabili, invecchiati benissimo.
 
-https://www.youtube.com/watch?v=UsXioRxVGO8
+https://www.youtube.com/watch?v=ad9D41WzkEQ
 
 Dopo "Standing on the Shoulders of Giants" non ricordo di averli più ascoltati (né attivamente né passivamente). È però uno di quei gruppi per i quali mi sarebbe sempre piaciuto vederli dal vivo in concerto. Quando si è parlato di una reunion tre anni fa avevo avuto la tentazione, ma mi ero poi arreso quasi subito data la ressa all'acquisto dei biglietti, la necessità di scegliere una data all'estero, e così via. Me ne sono pentito molto, ancor di più nell'ascoltare poi le registrazioni trafugate online, testimonianze del notevole stato di forma in cui si erano presentati nelle date del 2025. Direi migliore di molti concerti di cui si avevano registrazioni di magari 20 anni prima.
 
