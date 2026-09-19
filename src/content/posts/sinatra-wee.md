@@ -1,6 +1,6 @@
 ---
 title: In the Wee Small Hours
-pubDate: 2026-09-20
+pubDate: 2026-09-19
 description: Fare le ore piccole con Frank Sinatra
 cover: ./allegati/wee-small-hours.jpeg
 tags:
