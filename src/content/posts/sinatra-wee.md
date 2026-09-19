@@ -2,10 +2,10 @@
 title: In the Wee Small Hours
 pubDate: 2026-09-20
 description: Fare le ore piccole con Frank Sinatra
-cover: ./allegati/Sinatra-Gardner.jpg
+cover: ./allegati/wee-small-hours.jpeg
 tags:
   - Musica
-coverAlt: Frank Sinatra
+coverAlt: "Frank Sinatra: In the Wee Small Hours"
 ---
 Dopo la pazzia di comprare un giradischi contraddicendo ogni certezza costruita in un po' di anni di letture ed esperienze sull'ascolto della musica, mi è sembrato sensato recuperare anche qualche vecchio disco dell'epoca d'oro del vinile. Uno dei primi pensieri, allora, è stato: mi ci vuole un Frank Sinatra, qui. 
 Ho già parlato di Sinatra qualche post fa, ma non sono proprio un suo fan. Gli riconosco un fascino evidente, e ricordo una pazzesca pelle d'oca avuta quando allo Yankee Stadium, un giorno di giugno 2023, a fine partita eruppe "New York, New York" nella festa generale del pubblico (brividi anche solo a ripensarci).
