@@ -7,7 +7,7 @@ tags:
   - Cibo
 coverAlt: Un nigiri di tonno
 ---
-Nell'eterna ricerca di ambasciatori del cibo più buono del mondo (esagero, ma forse no) in Italia, ieri è stata la volta di un Omakase che ha acquistato una certa popolarità, almeno tra Marche e Abruzzo, negli ultimi mesi: [Shio Omakase](https://shio.it/) a Colli del Tronto.
+Nell'eterna ricerca di ambasciatori del cibo più buono del mondo (esagero, ma forse no) in Italia, ieri è stata la volta di un Omakase che ha acquistato [una certa popolarità](https://www.gamberorosso.it/notizie/rubriche/storie/shio-tronto-sushi/), almeno tra Marche e Abruzzo, negli ultimi mesi: [Shio Omakase](https://shio.it/) a Colli del Tronto.
 
 ![](shio1.jpeg)
 
