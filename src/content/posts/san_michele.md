@@ -6,7 +6,8 @@ cover: ./allegati/susa.jpeg
 tags:
   - Luoghi
   - Cibo
-coverAlt:
+  - Libri
+coverAlt: La vista dalla Sacra
 ---
 La val di Susa, come forse a molti centro-sudisti ignoranti come me, mi era nota più per le proteste contro la linea TAV che per la sua natura. Si tratta di una bella vallata, forse un po' anonima, sulla quale svetta una magnifica abbazia millenaria: la [Sacra di San Michele](https://it.wikipedia.org/wiki/Sacra_di_San_Michele).
 
