@@ -1,6 +1,6 @@
 ---
 title: La bontà in trionfo
-pubDate: 2026-09-22
+pubDate: 2026-10-24
 description: Di una "Cenerentola" napoletana e altre prelibatezze
 cover: ./allegati/cenerentola_sc3.jpeg
 tags:
