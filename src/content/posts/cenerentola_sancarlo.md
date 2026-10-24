@@ -5,6 +5,8 @@ description: Di una "Cenerentola" napoletana e altre prelibatezze
 cover: ./allegati/cenerentola_sc3.jpeg
 tags:
   - Musica
+  - Cibo
+  - Luoghi
 coverAlt: La Cenerentola del 23 ottobre a Napoli
 ---
 In uno slancio di ottimismo, il 31 agosto 2025 avevo preso due biglietti per la *Cenerentola* di Rossini del 23 ottobre dell'anno successivo (cioè ieri) al San Carlo di Napoli. Rossini non è tra i miei operisti preferiti e non avevo mai ascoltato quest'opera per intero, ma ogni tanto l'ego va messo in secondo piano.
