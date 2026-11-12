@@ -1,6 +1,6 @@
 ---
 title: Beethoven, in verde, ed altre cose
-pubDate: 2026-11-11
+pubDate: 2026-11-12
 description: Qualche ricordo da Dublino
 cover: ./allegati/NCH.jpeg
 tags:
