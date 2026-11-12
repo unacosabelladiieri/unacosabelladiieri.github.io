@@ -16,7 +16,15 @@ Come dicevo nel post precedente, a meno di non essere davvero completisti e vole
 
 ![](Caravaggio_dublino.jpg)
 
-Tra le cose che provo sempre a incastrare quando sono all'estero in vacanza, a maggior ragione se avanza tempo, ci sono sempre eventi sportivi e ed eventi culturali. A Dublino non c'erano grosse partite di rugby negli scorsi giorni, e questo è un gran peccato. Abbiamo incastrato però un gran bel concerto last minute martedì 10 novembre alla National Concert Hall, un suggestivo teatro immancabilmente verde dotato di un'acustica notevolissima, vicino al grande (e verde già dal nome) parco St. Stephen's Green.
+Tra le cose che provo sempre a incastrare quando sono all'estero in vacanza, a maggior ragione se avanza tempo, ci sono sempre eventi sportivi e ed eventi culturali. A Dublino non c'erano grosse partite di rugby negli scorsi giorni, e questo è un gran peccato. Cosa incastrare dunque dopo il tour delle cose imperdibili che trovereste in tutte le guide di viaggio (e che quindi eviterò di ripetere inutilmente, non potendo però resistere a spiattellare qui qualche foto senza pietà)?
+
+![](5B61530B-AADF-4170-858B-F4B87F9C98CE_1_105_c.jpeg)
+
+![](christ.jpeg)
+
+![](trinity.jpeg)
+
+Ad esempio, si può incastrare un gran bel concerto last minute, come quello di martedì 10 novembre alla National Concert Hall, un suggestivo teatro immancabilmente verde dotato di un'acustica notevolissima, vicino al grande (e verde già dal nome) parco St. Stephen's Green.
 
 ![](Stephen.jpeg)
 
