@@ -7,6 +7,8 @@ tags:
   - Natura
   - Luoghi
   - Mare
+  - Viaggi
+  - Cibo
 coverAlt: Il faro di Howth
 ---
 Dalla stazione di Connolly a Dublino parte ogni 20 minuti un comodo trenino DART che porta fino a Howth, suggestivo villaggio di pescatori che dista pochi km dalla capitale e ne domina la baia a nord. Con un po' di diffidenza sulla prospettiva di dedicare a quest'escursione una mezza giornata delle quattro irlandesi, ci siamo avventurati lunedì mattina, approfittando del sole previsto, non sapendo esattamente cosa ci aspettasse (se non, verosimilmente, molto vento).

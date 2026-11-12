@@ -5,6 +5,10 @@ description: Qualche ricordo da Dublino
 cover: ./allegati/NCH.jpeg
 tags:
   - Musica
+  - Dublino
+  - Viaggi
+  - Cibo
+  - Luoghi
 coverAlt: La National Concert Hall di Dublino
 ---
 Come dicevo nel post precedente, a meno di non essere davvero completisti e voler andare a visitare anche il ponte lungo il quale Hamilton incise sulla pietra l'invenzione dei quaternioni, per avere un buon assaggio di quel che Dublino può offrire bastano due giorni e mezzo, facciamo tre se volete procedere con calma e/o avete bisogno di smaltire qualche Guinness o Jameson di troppo. Se poi si è sfortunati e si trova la National Gallery chiusa per tre giorni, si può ridurre il budget tempo di mezza giornata, da dedicare a qualche escursione fuoriporta per dimenticare di essersi persi uno dei più grandi Caravaggio che ci siano arrivati (con [non poche peripezie](https://it.wikipedia.org/wiki/Cattura_di_Cristo))
