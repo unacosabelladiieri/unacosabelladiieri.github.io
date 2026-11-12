@@ -24,7 +24,7 @@ La prima sospesa, totalmente inattesa (non avevo studiato), è stata trovare nei
 *I would spread the cloths under your feet:*  
 *But I, being poor, have only my dreams;*  
 *I have spread my dreams under your feet;*  
-*Tread softly because you tread on my dreams..  
+*Tread softly because you tread on my dreams.*   
 
 ![](howth6.jpeg)
 
