@@ -25,6 +25,6 @@ La sinfonia è diventata celebre nel corso degli anni, per la candida bellezza t
 
 https://youtu.be/QydpBLUyx6c?si=aRxakCoODtWPmyE2&t=275
 
-https://www.youtube.com/watch?v=qGGTgmorunc&list=OLAK5uy_keiEO3zeYGEjxSbq9pmeh6byI1u6339lg
+https://www.youtube.com/watch?v=1KBlIV5bkBQ
 
 A fine esecuzione, dopo qualche secondo di raccoglimento, il pubblico ha tributato intensi applausi all'orchestra e a Tony Pappano. Nessun fuori programma, come è sembrato inevitabile dopo le ultime, definitive note di Cajkovksij. 
