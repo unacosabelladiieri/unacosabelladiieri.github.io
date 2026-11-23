@@ -5,6 +5,8 @@ description: Cronaca della Traviata che ha inaugurato il ritrovato Teatro Comuna
 cover: ./allegati/teatrotraviata.jpeg
 tags:
   - Musica
+  - Luoghi
+  - città
 coverAlt: Il Teatro Comunale dell'Aquila
 ---
 Dopo diciassette anni dal terremoto del 6 aprile 2009 il “restauro” del Teatro Comunale "Nazzareno De Angelis" dell’Aquila è finalmente concluso. Ho usato le virgolette su restauro perché si dovrebbe parlare più propriamente di *ricostruzione*, tanto ingenti erano i danni, anche a voler in parte scusare le lungaggini infinite che hanno riguardato questo recupero. 
