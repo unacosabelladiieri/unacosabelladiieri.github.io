@@ -7,7 +7,7 @@ tags:
   - Musica
 coverAlt: Il Teatro Comunale dell'Aquila
 ---
-Dopo diciassette anni dal terremoto del 6 aprile 2009 il “restauro” del Teatro Comunale "Nazzareno Carusi" dell’Aquila è finalmente concluso. Ho usato le virgolette su restauro perché si dovrebbe parlare più propriamente di *ricostruzione*, tanto ingenti erano i danni, anche a voler in parte scusare le lungaggini infinite che hanno riguardato questo recupero. 
+Dopo diciassette anni dal terremoto del 6 aprile 2009 il “restauro” del Teatro Comunale "Nazzareno De Angelis" dell’Aquila è finalmente concluso. Ho usato le virgolette su restauro perché si dovrebbe parlare più propriamente di *ricostruzione*, tanto ingenti erano i danni, anche a voler in parte scusare le lungaggini infinite che hanno riguardato questo recupero. 
 
 ![](danniteatro.jpeg)
 
@@ -17,13 +17,13 @@ Complice la direzione artistica di Giorgio Pasotti al TSA (che ha sede nel ritro
 
 ![](teatroesterno.jpeg)
 
-La Traviata è andata in scena in tre repliche: una prima generale rivolta agli under 35, a prezzi umani, mercoledì 18 novembre. La prima vera e propria, esclusivamente su invito, venerdì 20, e la replica conclusiva aperta ai fortunati *sparalesti* del click andata in scena ieri sera, domenica 22.
+La Traviata è andata in scena in tre recite: una anteprima rivolta agli under 35, a prezzi umani, mercoledì 18 novembre. La prima vera e propria, esclusivamente su invito, venerdì 20, e la replica conclusiva aperta ai fortunati *sparalesti* del click andata in scena ieri sera, domenica 22.
 
 Inutile dire che le prime due serate hanno visto non poche polemiche, in parte giustificate dalla dose di innegabile provincialismo che asfissia alcune iniziative del capoluogo abruzzese. L’anteprima under 35 aveva in platea e nei palchi qualche chioma grigia di troppo, ed è parsa una presa in giro e una scorciatoia misera per accaparrarsi posti a prezzo minore.
 
 ![](immota.jpeg)
 
-La prima a inviti, in rigoroso abito nero d’ordinanza (quanti avranno confuso la richiesta della *cravatta nera* per una richiesta da prendere alla lettera?), è sembrata una parata filo-governativa a celebrare i trionfi della destra in città, regione, nazione: c’erano infatti sindaco, governatore della regione e presidente del consiglio, declinata al maschile come gradito. Si spera che il presidente della Repubblica sia stato almeno invitato e abbia scelto di declinare per i suoi motivi. 
+La prima a inviti, in rigoroso abito nero d’ordinanza (quanti avranno confuso la richiesta della *cravatta nera* per una richiesta da prendere alla lettera?), è sembrata una parata filo-governativa a celebrare i trionfi della destra in città, regione, nazione: c’erano infatti sindaco, governatore della regione e presidente del Consiglio, declinata al maschile come gradito. Si spera che il presidente della Repubblica sia stato almeno invitato e abbia scelto di declinare per i suoi motivi. 
 
 Ma veniamo a ieri, alla prima per gli “umani” in carne e ossa. Si trattava evidentemente di una prima di rodaggio, per alcuni disservizi organizzativi anche comprensibili che si sono visti, alcuni dei quali inevitabili dati gli spazi angusti e forse un po’ mal organizzati che il nuovo restauro ha trovato per gli ambienti necessari alla fruizione di alcuni servizi (guardaroba, caffè, biglietteria, ecc.)
 
@@ -39,8 +39,7 @@ Cosa dire della regia essenziale di Pasotti, basata su una sola scena costituita
 
 Una messa in scena complessivamente molto buona, dunque. 
 
-Cos’altro dire su questo nuovo inizio? Che parte del restauro del teatro poteva forse essere condotto in maniera migliore. Per iniziare, la scelta di spazi e logistica nel teatro sembra essere un po’ problematica (ma non bisogna dimenticare che le nuove norme mal si sposano a volte con strutture progettate moltissimi decenni fa). Quello che lascia perplessi è la disposizione delle sedute, in particolare nel loggione, dove la seconda fila è sostanzialmente di solo ascolto anche nella zona centrale, a causa del rialzo minimo rispetto alla prima. Peggio: l’altezza scelta per la balaustra metallica anti-caduta su ogni ordine di palchi e di loggione, che ostruisce la vista in modo davvero problematico e che sarebbe bastato spostare anche pochi cm più in alto. 
-Infine, la fruibilità degli spazi: le porte dei palchi sono anguste e lo spazio camminabile nel loggione è molto problematico e, data l’età media dei frequentatori delle istituzioni culturali, non proprio rassicurante. 
+Cos’altro dire su questo nuovo inizio? Che parte del restauro del teatro poteva forse essere condotto in maniera migliore. Per iniziare, la scelta di spazi e logistica nel teatro sembra essere un po’ problematica (ma non bisogna dimenticare che le nuove norme mal si sposano a volte con strutture progettate moltissimi decenni fa). Quello che lascia perplessi è la disposizione delle sedute, in particolare nel loggione, dove la seconda fila è sostanzialmente di solo ascolto anche nella zona centrale, a causa del rialzo minimo rispetto alla prima. Peggio: l’altezza scelta per la balaustra metallica anti-caduta su ogni ordine di palchi e di loggione, che ostruisce la vista in modo davvero problematico e che sarebbe bastato spostare anche pochi cm più in alto. Infine, la fruibilità degli spazi: le porte dei palchi sono anguste e lo spazio camminabile nel loggione è molto problematico e, data l’età media dei frequentatori delle istituzioni culturali, non proprio rassicurante. 
 
 L’Aquila ritrova dunque un teatro in cui seguire la scena è scomodo per gli spettatori fuori da platea e primo settore, e questo in parte per scelte progettuali forse non del tutto oculate, speriamo (senza troppa convinzione) rivedibili. Anche per questo, sembra sensato che i prezzi dei biglietti siano destinati a essere più umani dei 60 euro per il loggione (40 per la seconda fila), che sono fuori dal mondo anche in teatri di blasone mondiale per allestimenti ben più costosi di questo. Immagino si sia pagato un extra per l’evento, e forse ci sta. 
 
@@ -48,4 +47,4 @@ Ci sono però anche moltissime cose lodevoli, la cui importanza non va diminuita
 
 ![](restauro.jpeg)
 
-Una nota personale a conclusione: L’Aquila è una città strabordante, per la sua dimensione, di iniziative musicali e teatrali di massimo rilievo nazionale e internazionale. Il pubblico dell’Aquila ha avuto nel corso dei decenni una fama altissima, a partire da una nota e raccontata investitura ricevuta da Arthur Rubinstein come pubblico "del cuore", attento e memorabile, che gli valse peraltro la cittadinanza onoraria. Negli ultimi anni mi è parso che l’attenzione e il rispetto del pubblico siano diminuiti, l’ascolto sia diventato sempre più chiassoso e distratto, e la fretta di andare via a programma concluso sempre più urgente. Mi auguro che al restauro dei luoghi si accompagni un pieno restauro della tradizione culturale cittadina, quantomai opportuno per tenere il passo con la bellezza che questa città sa offire.
+Una nota personale a conclusione: L’Aquila è una città strabordante, per la sua dimensione, di iniziative musicali e teatrali di massimo rilievo nazionale e internazionale. Il pubblico dell’Aquila ha avuto nel corso dei decenni una fama altissima, a partire da una nota e raccontata investitura ricevuta da Arthur Rubinstein come pubblico "del cuore", attento e memorabile, che gli valse peraltro la cittadinanza onoraria. Negli ultimi anni mi è parso che l’attenzione e il rispetto del pubblico siano diminuiti, l’ascolto sia diventato sempre più chiassoso e distratto, e la fretta di andare via a programma concluso sempre più urgente. Mi auguro che al restauro dei luoghi si accompagni un pieno restauro della tradizione culturale cittadina, quantomai opportuno per tenere il passo con la bellezza che questa città sa offrire.
